@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { getObjectGroup } from "../loaders/glbLoader";
+import { getObjectGroup } from "../loaders/GlbLoader";
 
 const modelGroup = await getObjectGroup("/models/Golf5.glb");
 modelGroup.traverse((child) => {

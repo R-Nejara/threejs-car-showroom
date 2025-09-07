@@ -6,7 +6,7 @@ import { lights } from "./Light.js";
 const scene = new THREE.Scene();
 
 // Fog
-scene.fog = new THREE.Fog("#0088ff", 20, 50);
+scene.fog = new THREE.Fog("#0088ff", 15, 40);
 scene.background = new THREE.Color("#0088ff");
 
 // Addings To Scene

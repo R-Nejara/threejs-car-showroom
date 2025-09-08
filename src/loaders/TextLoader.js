@@ -9,6 +9,12 @@ const createTextObject = (text, fontUrl) => {
     loader.load(fontUrl, (font) => {
       const textGeometry = new TextGeometry(text, {
         font: font,
+        size: 1,
+        height: 1,
+        depth: 0.2,
+        bevelEnabled: true,
+        bevelThickness: 0.2,
+        bevelSize: 0.03,
       });
       const textMaterial = new THREE.MeshBasicMaterial();
       const textMesh = new THREE.Mesh(textGeometry, textMaterial);

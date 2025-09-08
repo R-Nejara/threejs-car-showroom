@@ -6,6 +6,15 @@ import { carPosition } from "../core/Showcase.js";
 
 const controls = new OrbitControls(camera, canvas);
 controls.target.copy(carPosition);
+console.log(controls.getPolarAngle(controls));
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+
+// Disables Free movement
+controls.enablePan = false;
+// Disables Unlimited Rotation
+controls.minPolarAngle = 0.55;
+controls.maxPolarAngle = Math.PI / 2;
 
 const updateControls = () => {
   controls.update();

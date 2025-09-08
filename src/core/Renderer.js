@@ -12,12 +12,13 @@ const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
 renderer.setSize(sizes.width, sizes.height);
 
 // Set Pixelratio
-renderer.setPixelRatio = Math.min(2, devicePixelRatio);
+renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
 
 // Renderer Size Updater
 const updateRenderer = () => {
   updateSizes();
   renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
 };
 const render = () => {
   renderer.render(scene, camera);

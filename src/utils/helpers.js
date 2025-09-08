@@ -3,7 +3,7 @@ import * as THREE from "three";
 // Helper Constants
 // Car And Sky Position
 const carPosition = new THREE.Vector3(-2.5, 2, -1);
-const skyPosition = new THREE.Vector3(-5.5, 20, -3);
+const skyPosition = new THREE.Vector3(-5.5, 25, -3);
 
 // Ground and Sky Y Constants
 const GROUND_LEVEL_SIDEWALK_Y = 0.6;

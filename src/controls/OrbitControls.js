@@ -9,4 +9,4 @@ const updateControls = () => {
   controls.update();
 };
 
-export { updateControls };
+export { controls, updateControls };

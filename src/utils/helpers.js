@@ -2,7 +2,7 @@ import * as THREE from "three";
 
 // Helper Constants
 // Car And Sky Position
-const carPosition = new THREE.Vector3(-5.5, 2, -3);
+const carPosition = new THREE.Vector3(-2.5, 2, -1);
 const skyPosition = new THREE.Vector3(-5.5, 20, -3);
 
 // Ground and Sky Y Constants
@@ -25,6 +25,8 @@ const updateSizes = () => {
   sizes.height = window.innerHeight;
 };
 
+const mobileMedia = window.matchMedia("(max-width: 860px)");
+
 export {
   sizes,
   updateSizes,
@@ -33,4 +35,5 @@ export {
   GROUND_LEVEL_SIDEWALK_Y,
   GROUND_LEVEL_STREET_Y,
   SKY_LEVEL_Y,
+  mobileMedia,
 };

@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { sizes, updateSizes } from "../utils/helpers";
+import { skyPosition } from "./Showcase";
 
 // Initialize Camera
 const camera = new THREE.PerspectiveCamera(
@@ -10,7 +11,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 // Set Camera Position / Zoom
-const cameraPosition = new THREE.Vector3(-15, 4, 9);
+const cameraPosition = new THREE.Vector3(-15, skyPosition.y, 9);
 
 camera.position.copy(cameraPosition);
 camera.zoom = 3;

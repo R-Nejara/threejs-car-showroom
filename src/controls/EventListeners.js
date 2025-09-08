@@ -1,9 +1,10 @@
 import { animateStart, textFadeOutAnimation } from "../animations/Animations";
-import { updateCamera } from "../core/Camera";
+import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
 import { startButton, startText } from "../Selectors";
-import { toggleControls } from "./OrbitControls";
+import { toggleControls, updateControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
+import { mobileMedia } from "../utils/helpers";
 window.addEventListener("resize", () => {
   updateCamera();
   updateRenderer();
@@ -16,3 +17,16 @@ startButton.addEventListener("click", function () {
   toggleControls();
   animateStart();
 });
+
+// MOBILE EVENTLISTENER
+
+// Initial Mobile Request
+const changeOnMobile = (mobileMedia) => {
+  if (mobileMedia.matches) {
+    camera.fov = 100;
+    camera.zoom = 2;
+    camera.updateProjectionMatrix();
+  } else {
+    camera.fov = 75;
+  }
+};

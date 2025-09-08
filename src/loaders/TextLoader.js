@@ -18,6 +18,7 @@ const createTextObject = (text, fontUrl) => {
       });
       const textMaterial = new THREE.MeshBasicMaterial();
       const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      textMesh.material.transparent = true;
       resolve(textMesh);
     });
   });

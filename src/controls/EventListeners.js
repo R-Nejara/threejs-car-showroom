@@ -30,3 +30,12 @@ const changeOnMobile = (mobileMedia) => {
     camera.fov = 75;
   }
 };
+
+changeOnMobile(mobileMedia);
+
+mobileMedia.addEventListener("change", function () {
+  changeOnMobile(mobileMedia);
+});
+window.addEventListener("resize", function () {
+  changeOnMobile(mobileMedia);
+});

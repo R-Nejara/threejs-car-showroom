@@ -20,4 +20,8 @@ const updateControls = () => {
   controls.update();
 };
 
-export { controls, updateControls };
+const toggleControls = () => {
+  controls.enabled = !controls.enabled;
+};
+
+export { controls, updateControls, toggleControls };

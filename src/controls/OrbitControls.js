@@ -11,7 +11,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 
 // Disables Free movement
-controls.enablePan = false;
+controls.enabled = false;
 // Disables Unlimited Rotation
 controls.minPolarAngle = 0.55;
 controls.maxPolarAngle = Math.PI / 2;

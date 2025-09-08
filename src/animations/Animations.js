@@ -25,4 +25,16 @@ const targetPositionAnimation = () => {
     ease: "circ.inOut",
   });
 };
+
+const animateStart = () => {
+  if (isStarted) return;
+  isStarted = true;
+  controls.target = skyPosition;
+  camera.position.y = skyPosition.y;
+  cameraPositionAnimation();
+  targetPositionAnimation();
+};
+
+export { skyPosition, animateStart };
+
 // Start Animation_END:

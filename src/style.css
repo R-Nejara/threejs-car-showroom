@@ -20,6 +20,7 @@
   border: 5px solid #fff;
   text-align: center;
   opacity: 0.7;
+  transition: 500ms all;
 }
 #start-button:hover {
   cursor: pointer;
@@ -30,4 +31,11 @@
   font-family: sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+
+  animation-name: buttonHide;
+  animation-duration: 50ms;
+}
+
+.hidden {
+  opacity: 0 !important;
 }

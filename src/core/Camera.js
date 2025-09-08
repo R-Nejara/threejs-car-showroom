@@ -13,7 +13,7 @@ const camera = new THREE.PerspectiveCamera(
 const cameraPosition = new THREE.Vector3(-15, skyPosition.y, 9);
 
 camera.position.copy(cameraPosition);
-camera.zoom = 3;
+camera.zoom = 2.5;
 
 // Updates Camera
 camera.updateProjectionMatrix();

@@ -2,12 +2,21 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { carPosition, skyPosition } from "../core/Showcase";
+import { skyPosition, carPosition } from "../utils/helpers";
+import { nameText } from "../core/Text";
 
 // Helper Variables
 let isStarted = false;
 
 // Start Animation_START:
+
+const textFadeOutAnimation = (text) => {
+  gsap.to(text.material, {
+    opacity: 0,
+    duration: 2,
+  });
+};
+
 const cameraPositionAnimation = () => {
   gsap.to(camera.position, {
     y: carPosition.y,
@@ -37,6 +46,6 @@ const animateStart = () => {
   targetPositionAnimation();
 };
 
-export { skyPosition, animateStart };
+export { animateStart, textFadeOutAnimation };
 
 // Start Animation_END:

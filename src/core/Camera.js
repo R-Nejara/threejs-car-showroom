@@ -1,6 +1,5 @@
 import * as THREE from "three";
-import { sizes, updateSizes } from "../utils/helpers";
-import { skyPosition } from "./Showcase";
+import { sizes, skyPosition, updateSizes } from "../utils/helpers";
 
 // Initialize Camera
 const camera = new THREE.PerspectiveCamera(

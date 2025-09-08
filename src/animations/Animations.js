@@ -3,7 +3,6 @@ import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
 import { skyPosition, carPosition } from "../utils/helpers";
-import { nameText } from "../core/Text";
 
 // Helper Variables
 let isStarted = false;
@@ -14,6 +13,12 @@ const textFadeOutAnimation = (text) => {
   gsap.to(text.material, {
     opacity: 0,
     duration: 2,
+  });
+  gsap.to(text.rotation, {
+    y: 0.1,
+    duration: 5,
+    delay: 0.4,
+    ease: "power1.out",
   });
 };
 

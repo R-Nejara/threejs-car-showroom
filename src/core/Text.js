@@ -11,12 +11,12 @@ const nameText = await createTextObject(
 );
 
 // Set Initial Text Positions
-titleText.position.copy(new THREE.Vector3(-5, SKY_LEVEL_Y + 2.5, -15));
-nameText.position.copy(new THREE.Vector3(-5, SKY_LEVEL_Y + 1, -15));
+titleText.position.copy(new THREE.Vector3(-2, SKY_LEVEL_Y + 2.5, -15));
+nameText.position.copy(new THREE.Vector3(-2, SKY_LEVEL_Y + 1, -15));
 
 // Set Initial Text Rotations
-titleText.rotation.y = -0.5;
-nameText.rotation.y = -0.5;
+titleText.rotation.y = -0.6;
+nameText.rotation.y = -0.7;
 
 // Exports
 export { titleText, nameText };

@@ -7,4 +7,8 @@ modelGroup.traverse((child) => {
   child.receiveShadow = true;
 });
 
-export { modelGroup };
+// Car and Sky Position as Vector3
+const carPosition = new THREE.Vector3(-5.5, 2, -3);
+const skyPosition = new THREE.Vector3(-5.5, 20, -3);
+
+export { modelGroup, carPosition, skyPosition };

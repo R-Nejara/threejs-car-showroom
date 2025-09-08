@@ -13,6 +13,7 @@ const cameraPositionAnimation = () => {
     y: carPosition.y,
     duration: 5,
     ease: "circ.inOut",
+    delay: 0.3,
   });
 };
 
@@ -21,6 +22,7 @@ const targetPositionAnimation = () => {
     x: carPosition.x,
     y: carPosition.y,
     z: carPosition.z,
+    delay: 0.3,
     duration: 5,
     ease: "circ.inOut",
   });

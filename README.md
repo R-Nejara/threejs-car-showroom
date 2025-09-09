@@ -8,11 +8,7 @@ Explore and interact with a car in a modern web environment.
 
 ## 🌐 Preview
 
-<!-- Add your live demo link here if available -->
-
-## _Soon_
-
-<!-- [Live Demo](https://your-demo-link.com) -->
+[Live Demo](https://coruscating-druid-fc1ea1.netlify.app/)
 
 ## 🚗 Features
 

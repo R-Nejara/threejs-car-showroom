@@ -6,10 +6,10 @@ import { pannelPosition } from "../utils/helpers";
 // Create Iframe Object
 const iframe = document.createElement("iframe");
 // Configure Iframe
-iframe.src =
-  "https://threejs.org/docs/#examples/en/renderers/CSS3DRenderer.domElement";
+iframe.src = "./index.html";
 iframe.style.width = pannelSizes.width * 100 + "px";
 iframe.style.height = pannelSizes.height * 100 + "px";
+iframe.style.border = "0px";
 
 // Transfer HTML Element Into CSS3DObject
 const webObject = new CSS3DObject(iframe);

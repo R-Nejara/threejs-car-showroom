@@ -1,7 +1,4 @@
-import {
-  CSS3DRenderer,
-  CSS3DObject,
-} from "three/addons/renderers/CSS3DRenderer.js";
+import { CSS3DRenderer } from "three/addons/renderers/CSS3DRenderer.js";
 import { sizes, updateSizes } from "../utils/helpers";
 import { scene } from "./Scene";
 import { camera } from "./Camera";

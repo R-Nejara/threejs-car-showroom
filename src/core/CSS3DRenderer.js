@@ -2,20 +2,20 @@ import {
   CSS3DRenderer,
   CSS3DObject,
 } from "three/addons/renderers/CSS3DRenderer.js";
-import { sizes } from "../utils/helpers";
+import { sizes, updateSizes } from "../utils/helpers";
 import { scene } from "./Scene";
 import { camera } from "./Camera";
 
-// Initialize renderer
+// Initialize Renderer
 const siteRenderer = new CSS3DRenderer();
 
 // Set Renderer Size
 siteRenderer.setSize(sizes.width, sizes.height);
 
-// Add dom Element to body
+// Add Dom Element To Body
 document.body.appendChild(siteRenderer.domElement);
 
-// Configure dom Element
+// Configure Dom Element
 siteRenderer.domElement.style.position = "absolute";
 siteRenderer.domElement.style.top = "0";
 siteRenderer.domElement.style.pointerEvents = "none";
@@ -23,4 +23,14 @@ siteRenderer.domElement.style.pointerEvents = "none";
 // Initial Render
 siteRenderer.render(scene, camera);
 
-export { siteRenderer };
+// Render And Updade Functions
+const renderSiteRenderer = () => {
+  siteRenderer.render(scene, camera);
+};
+
+const updateSiteRenderer = () => {
+  updateSizes();
+  siteRenderer.setSize(sizes.width, sizes.height);
+};
+
+export { siteRenderer, renderSiteRenderer, updateSiteRenderer };

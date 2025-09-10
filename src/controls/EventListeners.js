@@ -5,9 +5,11 @@ import { startButton, startText } from "../Selectors";
 import { toggleControls, updateControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
+import { updateSiteRenderer } from "../core/CSS3DRenderer";
 window.addEventListener("resize", () => {
   updateCamera();
   updateRenderer();
+  updateSiteRenderer();
 });
 
 startButton.addEventListener("click", function () {

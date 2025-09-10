@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { createTextObject } from "../loaders/textLoader";
+import { createTextObject } from "../loaders/TextLoader.js";
 import { fonts } from "../utils/fonts";
 import { SKY_LEVEL_Y } from "../utils/helpers";
 

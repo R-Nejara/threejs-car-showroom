@@ -6,7 +6,11 @@ import { scene } from "./Scene.js";
 import { rendererShadowSetup } from "./Shadow.js";
 
 // Initialize Renderer
-const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
+  antialias: true,
+  alpha: true,
+});
 
 // Renderer Size
 renderer.setSize(sizes.width, sizes.height);

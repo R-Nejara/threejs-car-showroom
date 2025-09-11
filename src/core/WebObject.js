@@ -6,7 +6,7 @@ import { pannelPosition } from "../utils/helpers";
 // Create Iframe Object
 const iframe = document.createElement("iframe");
 // Configure Iframe
-iframe.src = "./index.html";
+iframe.src = "./info.html";
 iframe.style.width = pannelSizes.width * 100 + "px";
 iframe.style.height = pannelSizes.height * 100 + "px";
 iframe.style.border = "0px";

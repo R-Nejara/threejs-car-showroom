@@ -24,9 +24,7 @@ body {
   border: 5px solid #fff;
   text-align: center;
   opacity: 0.7;
-  transition:
-    transform 2000ms,
-    opacity 500ms;
+  transition: transform 10000ms, opacity 500ms;
 }
 #start-button:hover {
   cursor: pointer;
@@ -45,5 +43,5 @@ body {
 .hidden {
   opacity: 0 !important;
   font-size: 0px !important;
-  transform: translateY(-100px) !important;
+  transform: translateY(-100vh) !important;
 }

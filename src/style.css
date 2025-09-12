@@ -1,3 +1,25 @@
+:root {
+  --border-width: 0.25rem;
+
+  --light-color: #ffffff;
+  --dark-color: #19191c;
+
+  --moon-active-color: #4e48ee;
+  --sun-active-color: #ff8800;
+
+  --icon-bar-inactive-Color: #373737;
+  --icon-bar-active-dark-color: #4e48ee;
+
+  --bar-light-color: rgb(255, 255, 255, 0.4);
+  --bar-dark-color: rgb(25, 25, 28, 0.4);
+  --bar-circle-background: rgb(96, 96, 96, 0.6);
+  --bar-border-raidus: 3.8125rem;
+  --bar-icon-inactive-opacity: 0.6;
+  --bar-icon-active-opacity: 1;
+
+  --lowbeam-color: #3fff00;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,12 +28,13 @@ body {
   max-height: 100vh;
   max-width: 100vw;
 }
-.button-area {
+#button-area {
   position: absolute;
   margin: 0 auto;
   top: 70%;
   left: 50%;
   transform: translate(-50%);
+  transition: all 10000ms;
 }
 
 #start-button {
@@ -44,4 +67,49 @@ body {
   opacity: 0 !important;
   font-size: 0px !important;
   transform: translateY(-100vh) !important;
+}
+
+.overlay {
+  position: absolute;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+.svg-icons {
+  width: 3rem;
+  fill: var(--icon-bar-inactive-Color);
+}
+.icon {
+  font-size: 2.5rem;
+  color: var(--icon-bar-inactive-Color);
+}
+
+.bar-area {
+  background-color: var(--bar-light-color);
+  border-radius: var(--bar-border-raidus);
+  padding-inline: 2rem;
+  width: fit-content;
+  padding-block: 1rem;
+}
+.bar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  opacity: var(--bar-icon-inactive-opacity);
+}
+.circle {
+  background-color: var(--bar-circle-background);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.bar-area-parent {
+  position: absolute;
+  top: 89vh;
+  left: 50vw;
+  transform: translate(-50%);
 }

@@ -1,11 +1,12 @@
 import { animateStart, textFadeOutAnimation } from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
-import { startButton, startText } from "../Selectors";
+import { startButton, startButtonArea, startText } from "../Selectors";
 import { toggleControls, updateControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
 import { updateSiteRenderer } from "../core/CSS3DRenderer";
+
 window.addEventListener("resize", () => {
   updateCamera();
   updateRenderer();
@@ -14,6 +15,7 @@ window.addEventListener("resize", () => {
 
 startButton.addEventListener("click", function () {
   startButton.classList.add("hidden");
+  startButtonArea.classList.add("hidden");
   textFadeOutAnimation(titleText);
   textFadeOutAnimation(nameText);
   toggleControls();

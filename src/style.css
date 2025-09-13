@@ -103,8 +103,8 @@ body {
 .overlay {
   opacity: 0;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
   transition: var(--transition-long-extradelay);
   pointer-events: none;
@@ -115,7 +115,7 @@ body {
 }
 
 .reveal-overlay {
-  max-height: 100vh;
+  max-height: 100dvh;
   overflow: visible;
   opacity: 1;
 }
@@ -145,7 +145,7 @@ body {
 
   padding-block: 0.75rem;
   transition: var(--transition-long);
-  margin-bottom: 5vh;
+  margin-bottom: 5dvh;
 }
 .bar-area-night {
   background-color: var(--bar-dark-color);
@@ -210,7 +210,7 @@ body {
 
 .top-bar {
   display: flex;
-  width: 100vw;
+  width: 100dvw;
   justify-content: space-between;
   transition: var(--transition-normal);
 }

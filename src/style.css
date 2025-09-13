@@ -30,6 +30,9 @@
 
   /* Misc */
   --lowbeam-active-color: #3fff00;
+  --transition-faster: all 500ms;
+  --transition-normal: all 1500ms;
+  --transition-long: all 2000ms;
 }
 
 /* =======================
@@ -110,6 +113,7 @@ body {
 .icon {
   font-size: 2rem;
   color: var(--icon-bar-inactive-Color);
+  transition: var(--transition-long);
 }
 
 /* =======================
@@ -121,6 +125,7 @@ body {
   padding-inline: 2rem;
   width: fit-content;
   padding-block: 0.75rem;
+  transition: var(--transition-long);
 }
 .bar-area-night {
   background-color: var(--bar-dark-color);
@@ -141,7 +146,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 500ms;
+  transition: var(--transition-normal);
 }
 .bar-area-parent {
   position: absolute;
@@ -167,7 +172,7 @@ body {
   border-radius: 4rem;
   position: relative;
   cursor: pointer;
-  transition: all 1000ms;
+  transition: var(--transition-long);
 }
 .border-night {
   border-color: var(--dark-color);
@@ -192,7 +197,7 @@ body {
   justify-content: space-between;
   margin-top: 2rem;
   margin-inline: 2rem;
-  transition: all 500ms;
+  transition: var(--transition-normal);
 }
 
 /* =======================
@@ -205,7 +210,7 @@ body {
   position: absolute;
   border-radius: 100%;
   transform: translateX(50%);
-  transition: all 500ms;
+  transition: var(--transition-faster);
 }
 .ball-toggle {
   transform: translateX(-50%);
@@ -214,7 +219,7 @@ body {
 .sun {
   color: var(--sun-active-color);
   z-index: 1;
-  transition: all 500ms;
+  transition: var(--transition-normal);
 }
 .sun-inactive {
   color: var(--light-color);
@@ -222,7 +227,7 @@ body {
 .moon {
   color: var(--dark-color);
   z-index: 1;
-  transition: all 500ms;
+  transition: var(--transition-normal);
 }
 .moon-active {
   color: var(--icon-bar-active-dark-color);

@@ -6,18 +6,20 @@
 
   --moon-active-color: #4e48ee;
   --sun-active-color: #ff8800;
+  --daynight-switch-backgroundcolor: rgb(255, 255, 255, 0.31);
+  --daynight-ball-color-day: rgb(255, 255, 255, 0.57);
 
   --icon-bar-inactive-Color: #373737;
   --icon-bar-active-dark-color: #4e48ee;
 
   --bar-light-color: rgb(255, 255, 255, 0.4);
   --bar-dark-color: rgb(25, 25, 28, 0.4);
-  --bar-circle-background: rgb(96, 96, 96, 0.6);
+  --bar-circle-background: rgb(255, 255, 255, 08);
   --bar-border-raidus: 3.8125rem;
   --bar-icon-inactive-opacity: 0.6;
   --bar-icon-active-opacity: 1;
 
-  --lowbeam-color: #3fff00;
+  --lowbeam-active-color: #3fff00;
 }
 
 body {
@@ -34,7 +36,7 @@ body {
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  transition: all 10000ms;
+  transition: opacity 10000ms;
 }
 
 #start-button {
@@ -59,7 +61,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 
-  animation-name: buttonHide;
   animation-duration: 50ms;
 }
 
@@ -75,11 +76,11 @@ body {
   max-height: 100vh;
 }
 .svg-icons {
-  width: 3rem;
+  width: 2.5rem;
   fill: var(--icon-bar-inactive-Color);
 }
 .icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--icon-bar-inactive-Color);
 }
 
@@ -88,7 +89,7 @@ body {
   border-radius: var(--bar-border-raidus);
   padding-inline: 2rem;
   width: fit-content;
-  padding-block: 1rem;
+  padding-block: 0.75rem;
 }
 .bar-icons {
   display: flex;
@@ -99,8 +100,8 @@ body {
 }
 .circle {
   background-color: var(--bar-circle-background);
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -109,7 +110,57 @@ body {
 }
 .bar-area-parent {
   position: absolute;
-  top: 89vh;
+  top: 91vh;
   left: 50vw;
   transform: translate(-50%);
+}
+.sound-switch-icon {
+  background-color: var(--light-color);
+}
+
+.daynight-switch-area {
+  background-color: var(--daynight-switch-backgroundcolor);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 8rem;
+  height: 4rem;
+  border: 4px solid var(--light-color);
+  border-radius: 4rem;
+  position: relative;
+  cursor: pointer;
+}
+.daynight-switch-icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.top-bar-allocator {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-inline: 2rem;
+}
+.ball {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--daynight-ball-color-day);
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+}
+.sun {
+  color: var(--sun-active-color);
+  z-index: 1;
+}
+.moon {
+  color: var(--dark-color);
 }

@@ -1,12 +1,7 @@
 import { animateStart, textFadeOutAnimation } from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
-import {
-  dayNightSwitch,
-  startButton,
-  startButtonArea,
-  startText,
-} from "../Selectors";
+import { overlay, startButton, startButtonArea, startText } from "../Selectors";
 import { toggleControls, updateControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
@@ -30,11 +25,19 @@ startButton.addEventListener("click", function () {
 // OVERLAY EVENTLISTENER
 
 // Day/Night switch
-dayNightSwitch.area.addEventListener("click", function () {
-  dayNightSwitch.ball.classList.toggle("ball-toggle");
-  dayNightSwitch.moon.classList.toggle("moon-active");
-  dayNightSwitch.sun.classList.toggle("sun-inactive");
-  dayNightSwitch.area.classList.toggle("border-night");
+overlay.dayNightSwitch.area.addEventListener("click", function () {
+  overlay.dayNightSwitch.ball.classList.toggle("ball-toggle");
+  overlay.dayNightSwitch.moon.classList.toggle("moon-active");
+  overlay.dayNightSwitch.sun.classList.toggle("sun-inactive");
+  overlay.dayNightSwitch.area.classList.toggle("border-night");
+  overlay.bar.area.classList.toggle("bar-area-night");
+
+  overlay.global.circle.forEach((circle) => {
+    circle.classList.toggle("circle-night");
+  });
+  overlay.global.icon.forEach((icon) => {
+    icon.classList.toggle("icon-night");
+  });
 });
 
 // MOBILE EVENTLISTENER

@@ -33,7 +33,7 @@
   --transition-faster: all 500ms;
   --transition-normal: all 1000ms;
   --transition-long: all 1500ms;
-  --transition-long-extradelay: all 3.75s 4s;
+  --transition-long-extradelay: all 500ms 5.1s;
 }
 
 /* =======================

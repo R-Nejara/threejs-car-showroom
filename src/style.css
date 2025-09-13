@@ -129,7 +129,20 @@ body {
 /* =======================
    Bar Area & Circles
    ======================= */
+
+.bar-area-parent {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
 .bar-area {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  /* transform: translateX(-100%);
+  transform: translateY(-150%); */
+  transform: translate(-50%, -150%);
   background-color: var(--bar-light-color);
   border-radius: var(--bar-border-raidus);
   padding-inline: 2rem;
@@ -157,12 +170,6 @@ body {
   align-items: center;
   cursor: pointer;
   transition: var(--transition-normal);
-}
-.bar-area-parent {
-  position: absolute;
-  top: 91vh;
-  left: 50vw;
-  transform: translate(-50%);
 }
 .sound-switch-icon {
   background-color: var(--light-color);

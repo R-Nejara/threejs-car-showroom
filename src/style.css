@@ -220,16 +220,16 @@ body {
    Day/Night Ball & Icons
    ======================= */
 .ball {
-  width: 4rem;
-  height: 4rem;
+  width: 4.2rem;
+  height: 4.2rem;
   background-color: var(--daynight-ball-color-day);
   position: absolute;
   border-radius: 100%;
-  transform: translateX(50%);
+  transform: translateX(51%);
   transition: var(--transition-faster);
 }
 .ball-toggle {
-  transform: translateX(-50%);
+  transform: translateX(-51%);
   background-color: var(--dark-color);
 }
 .sun {

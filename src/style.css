@@ -1,17 +1,25 @@
+/* ======================
+   CSS Variables
+   ====================== */
 :root {
-  --border-width: 0.25rem;
-
+  /* General Colors */
   --light-color: #ffffff;
   --dark-color: #19191c;
 
+  /* Border */
+  --border-width: 0.25rem;
+
+  /* Day/Night Switch */
   --moon-active-color: #4e48ee;
   --sun-active-color: #ff8800;
   --daynight-switch-backgroundcolor: rgb(255, 255, 255, 0.31);
   --daynight-ball-color-day: rgb(255, 255, 255, 0.57);
 
+  /* Icon Bar */
   --icon-bar-inactive-Color: #373737;
   --icon-bar-active-dark-color: #4e48ee;
 
+  /* Bar Styles */
   --bar-light-color: rgb(255, 255, 255, 0.4);
   --bar-dark-color: rgb(25, 25, 28, 0.4);
   --bar-circle-background: rgb(255, 255, 255, 08);
@@ -19,9 +27,13 @@
   --bar-icon-inactive-opacity: 0.6;
   --bar-icon-active-opacity: 1;
 
+  /* Misc */
   --lowbeam-active-color: #3fff00;
 }
 
+/* =======================
+  Base Styles
+  ======================= */
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +42,10 @@ body {
   max-height: 100vh;
   max-width: 100vw;
 }
+
+/* =======================
+   Button Area
+   ======================= */
 #button-area {
   position: absolute;
   margin: 0 auto;
@@ -39,11 +55,13 @@ body {
   transition: opacity 10000ms;
 }
 
+/* =======================
+   Start Button
+   ======================= */
 #start-button {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 15rem;
   height: 5rem;
   border: 5px solid #fff;
@@ -60,21 +78,30 @@ body {
   font-family: sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-
   animation-duration: 50ms;
 }
 
+/* =======================
+   Utility Classes
+   ======================= */
 .hidden {
   opacity: 0 !important;
   font-size: 0px !important;
   transform: translateY(-100vh) !important;
 }
 
+/* =======================
+   Overlay
+   ======================= */
 .overlay {
   position: absolute;
   max-width: 100vw;
   max-height: 100vh;
 }
+
+/* =======================
+   Icons
+   ======================= */
 .svg-icons {
   width: 2.5rem;
   fill: var(--icon-bar-inactive-Color);
@@ -84,6 +111,9 @@ body {
   color: var(--icon-bar-inactive-Color);
 }
 
+/* =======================
+   Bar Area & Circles
+   ======================= */
 .bar-area {
   background-color: var(--bar-light-color);
   border-radius: var(--bar-border-raidus);
@@ -118,25 +148,34 @@ body {
   background-color: var(--light-color);
 }
 
+/* =======================
+   Day/Night Switch
+   ======================= */
 .daynight-switch-area {
   background-color: var(--daynight-switch-backgroundcolor);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 8rem;
   height: 4rem;
   border: 4px solid var(--light-color);
   border-radius: 4rem;
   position: relative;
   cursor: pointer;
+  transition: all 1000ms;
+}
+.border-night {
+  border-color: var(--dark-color);
 }
 .daynight-switch-icons {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
+
+/* =======================
+   Top Bar
+   ======================= */
 .top-bar-allocator {
   display: flex;
   width: 100vw;
@@ -148,19 +187,38 @@ body {
   justify-content: space-between;
   margin-top: 2rem;
   margin-inline: 2rem;
+  transition: all 500ms;
 }
+
+/* =======================
+   Day/Night Ball & Icons
+   ======================= */
 .ball {
   width: 4rem;
   height: 4rem;
   background-color: var(--daynight-ball-color-day);
   position: absolute;
   border-radius: 100%;
-  right: 0;
+  transform: translateX(50%);
+  transition: all 500ms;
+}
+.ball-toggle {
+  transform: translateX(-50%);
+  background-color: var(--dark-color);
 }
 .sun {
   color: var(--sun-active-color);
   z-index: 1;
+  transition: all 500ms;
+}
+.sun-inactive {
+  color: var(--dark-color);
 }
 .moon {
   color: var(--dark-color);
+  z-index: 1;
+  transition: all 500ms;
+}
+.moon-active {
+  color: var(--icon-bar-active-dark-color);
 }

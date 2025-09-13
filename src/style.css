@@ -55,7 +55,9 @@ body {
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  transition: opacity 10000ms, font-size 10000ms;
+  transition:
+    opacity 10000ms,
+    font-size 10000ms;
 }
 
 /* =======================
@@ -70,7 +72,9 @@ body {
   border: 5px solid #fff;
   text-align: center;
   opacity: 0.7;
-  transition: transform 10000ms, opacity 500ms;
+  transition:
+    transform 10000ms,
+    opacity 500ms;
 }
 #start-button:hover {
   cursor: pointer;
@@ -99,11 +103,15 @@ body {
 .overlay {
   opacity: 0;
   position: absolute;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   transition: var(--transition-long-extradelay);
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .reveal-overlay {
@@ -129,23 +137,15 @@ body {
    Bar Area & Circles
    ======================= */
 
-.bar-area-parent {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
 .bar-area {
-  position: absolute;
-  top: 90vh;
-  left: 50vw;
-  transform: translateX(-50%);
   background-color: var(--bar-light-color);
   border-radius: var(--bar-border-raidus);
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   width: fit-content;
+
   padding-block: 0.75rem;
   transition: var(--transition-long);
+  margin-bottom: 3.75rem;
 }
 .bar-area-night {
   background-color: var(--bar-dark-color);
@@ -171,6 +171,8 @@ body {
 }
 .sound-switch-area {
   pointer-events: all;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 /* =======================
@@ -190,6 +192,8 @@ body {
   z-index: 50;
   pointer-events: all;
   cursor: pointer;
+  margin-top: 2rem;
+  margin-right: 2rem;
 }
 .border-night {
   border-color: var(--dark-color);
@@ -203,17 +207,11 @@ body {
 /* =======================
    Top Bar
    ======================= */
-.top-bar-allocator {
+
+.top-bar {
   display: flex;
   width: 100vw;
-  justify-content: center;
-}
-.top-bar {
-  width: 100%;
-  display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
-  margin-inline: 2rem;
   transition: var(--transition-normal);
 }
 

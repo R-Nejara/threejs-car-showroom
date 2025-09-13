@@ -146,7 +146,7 @@ body {
 
   padding-block: 0.75rem;
   transition: var(--transition-long);
-  margin-bottom: 5dvh;
+  margin-bottom: 2rem;
 }
 .bar-area-night {
   background-color: var(--bar-dark-color);
@@ -268,6 +268,8 @@ body {
   .daynight-switch-area {
     width: 6rem;
     height: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
   }
   .ball {
     width: 3rem;
@@ -275,6 +277,7 @@ body {
   }
   .bar-area {
     padding-block: 0.5rem;
+    margin-bottom: 1rem;
   }
   .svg-icons {
     width: 2rem;
@@ -285,5 +288,9 @@ body {
   }
   #start-text {
     font-size: 2.5rem;
+  }
+  .sound-switch-area {
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 }

@@ -22,6 +22,7 @@ const overlay = {
   global: {
     circle: document.querySelectorAll(".circle"),
     icon: document.querySelectorAll(".icon"),
+    overlay: document.querySelector(".overlay"),
   },
 };
 

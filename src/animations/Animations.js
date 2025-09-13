@@ -3,6 +3,7 @@ import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
 import { skyPosition, carPosition } from "../utils/helpers";
+import { overlay } from "../Selectors";
 
 // Helper Variables
 let isStarted = false;
@@ -51,6 +52,11 @@ const animateStart = () => {
   targetPositionAnimation();
 };
 
-export { animateStart, textFadeOutAnimation };
+const showOverlayAnimation = () => {
+  overlay.global.overlay.classList.add("reveal-overlay");
+  console.log("im exec");
+};
+
+export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 // Start Animation_END:

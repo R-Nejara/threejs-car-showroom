@@ -1,4 +1,8 @@
-import { animateStart, textFadeOutAnimation } from "../animations/Animations";
+import {
+  animateStart,
+  showOverlayAnimation,
+  textFadeOutAnimation,
+} from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
 import { overlay, startButton, startButtonArea, startText } from "../Selectors";
@@ -20,6 +24,7 @@ startButton.addEventListener("click", function () {
   textFadeOutAnimation(nameText);
   toggleControls();
   animateStart();
+  showOverlayAnimation();
 });
 
 // OVERLAY EVENTLISTENER

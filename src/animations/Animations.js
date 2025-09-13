@@ -54,7 +54,6 @@ const animateStart = () => {
 
 const showOverlayAnimation = () => {
   overlay.global.overlay.classList.add("reveal-overlay");
-  console.log("im exec");
 };
 
 export { animateStart, textFadeOutAnimation, showOverlayAnimation };

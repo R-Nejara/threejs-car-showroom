@@ -137,9 +137,9 @@ body {
 }
 .bar-area {
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -150%);
+  top: 90vh;
+  left: 50vw;
+  transform: translateX(-50%);
   background-color: var(--bar-light-color);
   border-radius: var(--bar-border-raidus);
   padding-inline: 2rem;

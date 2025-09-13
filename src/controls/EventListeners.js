@@ -15,6 +15,7 @@ window.addEventListener("resize", () => {
   updateCamera();
   updateRenderer();
   updateSiteRenderer();
+  stopTransition();
 });
 
 startButton.addEventListener("click", function () {
@@ -66,3 +67,11 @@ mobileMedia.addEventListener("change", function () {
 window.addEventListener("resize", function () {
   changeOnMobile(mobileMedia);
 });
+
+const stopTransition = () => {
+  document.body.classList.add("no-transition");
+  clearTimeout(window._resizeTimeout);
+  window._resizeTimeout = setTimeout(() => {
+    document.body.classList.remove("no-transition");
+  }, 400); // adjust delay as needed
+};

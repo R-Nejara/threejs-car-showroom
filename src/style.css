@@ -31,8 +31,9 @@
   /* Misc */
   --lowbeam-active-color: #3fff00;
   --transition-faster: all 500ms;
-  --transition-normal: all 1500ms;
-  --transition-long: all 2000ms;
+  --transition-normal: all 1000ms;
+  --transition-long: all 1500ms;
+  --transition-long-extradelay: all 3.75s 4s;
 }
 
 /* =======================
@@ -98,9 +99,18 @@ body {
    Overlay
    ======================= */
 .overlay {
+  opacity: 0;
   position: absolute;
   max-width: 100vw;
+  max-height: 0vh;
+  overflow: hidden;
+  transition: var(--transition-long-extradelay);
+}
+
+.reveal-overlay {
   max-height: 100vh;
+  overflow: visible;
+  opacity: 1;
 }
 
 /* =======================

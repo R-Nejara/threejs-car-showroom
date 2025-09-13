@@ -44,8 +44,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  max-height: 100vh;
-  max-width: 100vw;
 }
 
 /* =======================
@@ -57,7 +55,7 @@ body {
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  transition: opacity 10000ms, transform 10000ms, font-size 10000ms;
+  transition: opacity 10000ms, font-size 10000ms;
 }
 
 /* =======================
@@ -92,7 +90,7 @@ body {
 .hidden {
   opacity: 0 !important;
   font-size: 0px !important;
-  transform: translateY(-100vh) !important;
+  pointer-events: none;
 }
 
 /* =======================
@@ -102,9 +100,10 @@ body {
   opacity: 0;
   position: absolute;
   max-width: 100vw;
-  max-height: 0vh;
+  max-height: 100vh;
   overflow: hidden;
   transition: var(--transition-long-extradelay);
+  pointer-events: none;
 }
 
 .reveal-overlay {
@@ -140,8 +139,6 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  /* transform: translateX(-100%);
-  transform: translateY(-150%); */
   transform: translate(-50%, -150%);
   background-color: var(--bar-light-color);
   border-radius: var(--bar-border-raidus);
@@ -159,6 +156,7 @@ body {
   justify-content: center;
   gap: 3.5rem;
   opacity: var(--bar-icon-inactive-opacity);
+  pointer-events: all;
 }
 .circle {
   background-color: var(--bar-circle-background);
@@ -171,8 +169,8 @@ body {
   cursor: pointer;
   transition: var(--transition-normal);
 }
-.sound-switch-icon {
-  background-color: var(--light-color);
+.sound-switch-area {
+  pointer-events: all;
 }
 
 /* =======================
@@ -188,8 +186,10 @@ body {
   border: 4px solid var(--light-color);
   border-radius: 4rem;
   position: relative;
-  cursor: pointer;
   transition: var(--transition-long);
+  z-index: 50;
+  pointer-events: all;
+  cursor: pointer;
 }
 .border-night {
   border-color: var(--dark-color);
@@ -256,4 +256,28 @@ body {
 .icon-night {
   color: var(--light-color);
   fill: var(--light-color);
+}
+
+@media screen and (max-width: 860px) {
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .daynight-switch-area {
+    width: 6rem;
+    height: 3rem;
+  }
+  .ball {
+    width: 3rem;
+    height: 3rem;
+  }
+  .bar-area {
+    padding-block: 0.5rem;
+  }
+  .svg-icons {
+    width: 2rem;
+  }
 }

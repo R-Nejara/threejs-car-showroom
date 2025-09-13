@@ -55,9 +55,7 @@ body {
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  transition:
-    opacity 10000ms,
-    font-size 10000ms;
+  transition: opacity 10000ms, font-size 10000ms;
 }
 
 /* =======================
@@ -72,9 +70,7 @@ body {
   border: 5px solid #fff;
   text-align: center;
   opacity: 0.7;
-  transition:
-    transform 10000ms,
-    opacity 500ms;
+  transition: transform 10000ms, opacity 500ms;
 }
 #start-button:hover {
   cursor: pointer;
@@ -95,6 +91,10 @@ body {
   opacity: 0 !important;
   font-size: 0px !important;
   pointer-events: none;
+}
+
+.no-transition * {
+  transition-property: none !important;
 }
 
 /* =======================
@@ -145,7 +145,7 @@ body {
 
   padding-block: 0.75rem;
   transition: var(--transition-long);
-  margin-bottom: 3.75rem;
+  margin-bottom: 5vh;
 }
 .bar-area-night {
   background-color: var(--bar-dark-color);

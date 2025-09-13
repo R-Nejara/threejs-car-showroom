@@ -23,6 +23,7 @@
   --bar-light-color: rgb(255, 255, 255, 0.4);
   --bar-dark-color: rgb(25, 25, 28, 0.4);
   --bar-circle-background: rgb(255, 255, 255, 08);
+  --bar-circle-background-dark: rgb(25, 25, 28, 0.6);
   --bar-border-raidus: 3.8125rem;
   --bar-icon-inactive-opacity: 0.6;
   --bar-icon-active-opacity: 1;
@@ -121,6 +122,9 @@ body {
   width: fit-content;
   padding-block: 0.75rem;
 }
+.bar-area-night {
+  background-color: var(--bar-dark-color);
+}
 .bar-icons {
   display: flex;
   align-items: center;
@@ -137,6 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 500ms;
 }
 .bar-area-parent {
   position: absolute;
@@ -212,7 +217,7 @@ body {
   transition: all 500ms;
 }
 .sun-inactive {
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 .moon {
   color: var(--dark-color);
@@ -221,4 +226,12 @@ body {
 }
 .moon-active {
   color: var(--icon-bar-active-dark-color);
+}
+
+.circle-night {
+  background-color: var(--bar-circle-background-dark);
+}
+.icon-night {
+  color: var(--light-color);
+  fill: var(--light-color);
 }

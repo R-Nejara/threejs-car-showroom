@@ -62,6 +62,7 @@ export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 //Sunset Animation
 const toggleSunset = () => {
+  console.log("test");
 
 }
 

@@ -60,6 +60,11 @@ export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 // Start Animation_END:
 
+//Sunset Animation
+const toggleSunset = () => {
+
+}
+
 //Car Animations
 
 // Activates and Deactivates Car Headlights and Taillights

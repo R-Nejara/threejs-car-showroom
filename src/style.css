@@ -131,7 +131,17 @@ body {
 .icon {
   font-size: 2rem;
   color: var(--icon-bar-inactive-Color);
-  transition: var(--transition-long);
+  /* transition: var(--transition-long); */
+  transition: var(--transition-faster);
+}
+.icon-active {
+  color: var(--icon-bar-active-dark-color) !important;
+}
+.low-beam-active {
+  fill: var(--lowbeam-active-color) !important;
+}
+.mirror-active {
+  fill: var(--icon-bar-active-dark-color) !important;
 }
 
 /* =======================
@@ -174,6 +184,13 @@ body {
   pointer-events: all;
   margin-top: 2rem;
   margin-left: 2rem;
+}
+.volume .mute {
+  position: absolute;
+  overflow: hidden;
+}
+.volume-hide {
+  display: none;
 }
 
 /* =======================

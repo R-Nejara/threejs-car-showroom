@@ -17,7 +17,22 @@ const overlay = {
     sun: document.querySelector(".sun"),
   },
   bar: {
+    icons: {
+      lowBeam: document.querySelector(".low-beam"),
+      mirror: document.querySelector(".mirror"),
+      spiral: document.querySelector(".spiral"),
+    },
+    areas: {
+      lowBeam: document.querySelector(".low-beam-icon-area"),
+      mirror: document.querySelector(".mirror-icon-area"),
+      spiral: document.querySelector(".spiral-icon-area"),
+    },
     area: document.querySelector(".bar-area"),
+  },
+  volume: {
+    icon: document.querySelector(".volume"),
+    muteIcon: document.querySelector(".mute"),
+    area: document.querySelector(".sound-switch-area"),
   },
   global: {
     circle: document.querySelectorAll(".circle"),

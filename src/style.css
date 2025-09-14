@@ -268,6 +268,9 @@ button{
   color: var(--sun-active-color);
   z-index: 1;
   transition: var(--transition-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sun-inactive {
   color: var(--light-color);
@@ -276,6 +279,10 @@ button{
   color: var(--dark-color);
   z-index: 1;
   transition: var(--transition-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .moon-active {
   color: var(--icon-bar-active-dark-color);

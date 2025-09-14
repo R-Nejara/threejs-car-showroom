@@ -25,10 +25,10 @@ const textFadeOutAnimation = (text) => {
 
 const cameraPositionAnimation = () => {
   gsap.to(camera.position, {
-    y: carPosition.y,
-    duration: 5,
+    y: carPosition.y + 2,
+    duration: 3,
     ease: "circ.inOut",
-    delay: 0.3,
+    delay: 4,
   });
 };
 
@@ -38,7 +38,7 @@ const targetPositionAnimation = () => {
     y: carPosition.y,
     z: carPosition.z,
     delay: 0.3,
-    duration: 5,
+    duration: 4.5,
     ease: "circ.inOut",
   });
 };

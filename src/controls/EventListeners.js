@@ -30,7 +30,24 @@ startButton.addEventListener("click", function () {
 
 // OVERLAY EVENTLISTENER
 
-// Day/Night switch
+//Bar Buttons
+overlay.bar.areas.lowBeam.addEventListener("click", function () {
+  overlay.bar.icons.lowBeam.classList.toggle("low-beam-active");
+});
+overlay.bar.areas.mirror.addEventListener("click", function () {
+  overlay.bar.icons.mirror.classList.toggle("mirror-active");
+});
+overlay.bar.areas.spiral.addEventListener("click", function () {
+  overlay.bar.icons.spiral.classList.toggle("icon-active");
+});
+
+//Sound Switch
+overlay.volume.area.addEventListener("click", function () {
+  overlay.volume.icon.classList.toggle("volume-hide");
+  overlay.volume.muteIcon.classList.toggle("volume-hide");
+});
+
+// Day/Night Switch
 overlay.dayNightSwitch.area.addEventListener("click", function () {
   overlay.dayNightSwitch.ball.classList.toggle("ball-toggle");
   overlay.dayNightSwitch.moon.classList.toggle("moon-active");

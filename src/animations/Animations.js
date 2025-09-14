@@ -59,3 +59,20 @@ const showOverlayAnimation = () => {
 export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 // Start Animation_END:
+
+//Car Animations
+
+// Activates and Deactivates Car Headlights and Taillights
+const toggleCarLights = () => {
+  let isRunning;
+};
+
+// Folds Car Mirros In and Out
+const toggleCarMirrors = () => {
+  let isRunning;
+};
+
+// Activates and Deactivates Car Dance
+const toggleCarDance = () => {
+  let isRunning;
+};

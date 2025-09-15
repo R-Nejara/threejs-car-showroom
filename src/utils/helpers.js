@@ -4,6 +4,7 @@ import * as THREE from "three";
 // Positions
 const carPosition = new THREE.Vector3(-2.5, 2, -1);
 const skyPosition = new THREE.Vector3(-5.5, 25, -3);
+const directionalLightPosition = new THREE.Vector3(10, 10, 0);
 
 // Ground and Sky Y Constants
 const GROUND_LEVEL_SIDEWALK_Y = 0.6;
@@ -32,6 +33,7 @@ export {
   updateSizes,
   carPosition,
   skyPosition,
+  directionalLightPosition,
   GROUND_LEVEL_SIDEWALK_Y,
   GROUND_LEVEL_STREET_Y,
   SKY_LEVEL_Y,

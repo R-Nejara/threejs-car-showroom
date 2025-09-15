@@ -77,7 +77,6 @@ const backgroundChangeAnimation = (targetColor) => {
 
 //Animate Fog Swap
 const fogChangeAnimation = (targetColor) => {
-  console.log(targetColor);
   gsap.to(scene.fog.color, {
     r: targetColor.r,
     g: targetColor.g,

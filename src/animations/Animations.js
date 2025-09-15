@@ -58,10 +58,9 @@ const showOverlayAnimation = () => {
   overlay.global.overlay.classList.add("reveal-overlay");
 };
 
-
 // Start Animation_END:
 
-
+//DayNightCycle Animation_START
 
 //Animate Background Swap
 const backgroundChangeAnimation = (targetColor) => {
@@ -90,8 +89,8 @@ const fogChangeAnimation = (targetColor) => {
   );
 }
 
+//Animate Light Swap
 const lightIntensityAnimation = (targetLightIntensity) => {
-  //Animate Light Swap
   gsap.to(directionalLight, {
     intensity: targetLightIntensity,
     duration: 2.5,
@@ -127,7 +126,9 @@ const toggleSunset = (isDay) => {
   sunsetAnimation(targetSunHeight);
 }
 
-//Car Animations
+//DayNightCycle Animation_END
+
+//Car Animations_START
 
 // Activates and Deactivates Car Headlights and Taillights
 const toggleCarLights = () => {
@@ -143,5 +144,7 @@ const toggleCarMirrors = () => {
 const toggleCarDance = () => {
   let isRunning;
 };
+
+//Car Animations_END
 
 export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset };

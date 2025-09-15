@@ -87,6 +87,15 @@ const fogChangeAnimation = (targetColor) => {
   );
 }
 
+const lightIntensityAnimation = (targetLightIntensity) => {
+  //Animate Light Swap
+  gsap.to(directionalLight, {
+    intensity: targetLightIntensity,
+    duration: 2.5,
+    delay: 0.3,
+    ease: "power1.inOut",
+  },
+  );
 }
 
 //Car Animations

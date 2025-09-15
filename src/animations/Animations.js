@@ -98,6 +98,16 @@ const lightIntensityAnimation = (targetLightIntensity) => {
   );
 }
 
+  //Animatate Sun setting
+const sunsetAnimation = (targetSunHeight) => {
+  gsap.to(directionalLight.position, {
+    y: targetSunHeight,
+    duration: 3.5,
+    ease: "power1.inOut",
+  },
+  );
+}
+
 //Car Animations
 
 // Activates and Deactivates Car Headlights and Taillights

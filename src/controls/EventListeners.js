@@ -2,6 +2,7 @@ import {
   animateStart,
   showOverlayAnimation,
   textFadeOutAnimation,
+  toggleSunset,
 } from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
@@ -61,6 +62,11 @@ overlay.dayNightSwitch.area.addEventListener("click", function () {
   overlay.global.icon.forEach((icon) => {
     icon.classList.toggle("icon-night");
   });
+  
+  // Initilize variable to show if it's Daytime
+  const isDay = overlay.dayNightSwitch.sun.classList.contains("sun-inactive");
+  console.log(isDay);
+  toggleSunset(isDay);
 });
 
 // MOBILE EVENTLISTENER
@@ -90,5 +96,5 @@ const stopTransition = () => {
   clearTimeout(window._resizeTimeout);
   window._resizeTimeout = setTimeout(() => {
     document.body.classList.remove("no-transition");
-  }, 400); // adjust delay as needed
+  }, 400);
 };

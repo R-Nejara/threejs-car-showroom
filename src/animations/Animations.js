@@ -60,6 +60,19 @@ export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 // Start Animation_END:
 
+//Animate Background Swap
+const backgroundChangeAnimation = (targetColor) => {
+  gsap.to(scene.background, {
+    r: targetColor.r,
+    g: targetColor.g,
+    b: targetColor.b,
+    duration: 2.5,
+    delay: 0.3,
+    ease: "power1.inOut",
+  },
+  );
+}
+
 //Sunset Animation
 const toggleSunset = () => {
 

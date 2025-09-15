@@ -73,8 +73,19 @@ const backgroundChangeAnimation = (targetColor) => {
   );
 }
 
-//Sunset Animation
-const toggleSunset = () => {
+//Animate Fog Swap
+const fogChangeAnimation = (targetColor) => {
+  console.log(targetColor);
+  gsap.to(scene.fog.color, {
+    r: targetColor.r,
+    g: targetColor.g,
+    b: targetColor.b,
+    duration: 2.5,
+    delay: 0.3,
+    ease: "power1.inOut",
+  },
+  );
+}
 
 }
 

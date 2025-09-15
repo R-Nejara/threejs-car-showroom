@@ -4,6 +4,8 @@ import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
 import { skyPosition, carPosition } from "../utils/helpers";
 import { overlay } from "../Selectors";
+import { scene } from "../core/Scene";
+import { directionalLight } from "../core/Light";
 
 // Helper Variables
 let isStarted = false;
@@ -56,9 +58,10 @@ const showOverlayAnimation = () => {
   overlay.global.overlay.classList.add("reveal-overlay");
 };
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation };
 
 // Start Animation_END:
+
+
 
 //Animate Background Swap
 const backgroundChangeAnimation = (targetColor) => {
@@ -98,14 +101,30 @@ const lightIntensityAnimation = (targetLightIntensity) => {
   );
 }
 
-  //Animatate Sun setting
+//Animatate Sun setting
 const sunsetAnimation = (targetSunHeight) => {
+
   gsap.to(directionalLight.position, {
     y: targetSunHeight,
     duration: 3.5,
     ease: "power1.inOut",
   },
   );
+}
+
+//Sunset Animation
+const toggleSunset = (isDay) => {
+
+  const targetSunHeight = isDay ? 0 : 10
+  const targetLightIntensity = isDay ? 0 : 5;
+  const darkColor = new THREE.Color("#283785");
+  const lightColor = new THREE.Color("#89cff0");
+  const targetColor = isDay ? darkColor : lightColor;
+
+  backgroundChangeAnimation(targetColor);
+  fogChangeAnimation(targetColor);
+  lightIntensityAnimation(targetLightIntensity);
+  sunsetAnimation(targetSunHeight);
 }
 
 //Car Animations
@@ -124,3 +143,5 @@ const toggleCarMirrors = () => {
 const toggleCarDance = () => {
   let isRunning;
 };
+
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset };

@@ -65,7 +65,6 @@ overlay.dayNightSwitch.area.addEventListener("click", function () {
   
   // Initilize variable to show if it's Daytime
   const isDay = overlay.dayNightSwitch.sun.classList.contains("sun-inactive");
-  console.log(isDay);
   toggleSunset(isDay);
 });
 

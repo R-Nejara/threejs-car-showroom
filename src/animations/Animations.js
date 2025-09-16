@@ -124,7 +124,7 @@ const toggleSunset = (isDay) => {
   backgroundChangeAnimation(targetColor);
   fogChangeAnimation(targetColor);
   lightIntensityAnimation(targetLightIntensity);
-  sunsetAnimation(targetSunHeight);
+  sunsetAnimation(targetSunHeight, targetSunDistance);
 }
 
 //DayNightCycle Animation_END

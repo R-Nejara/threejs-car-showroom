@@ -2,10 +2,10 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { skyPosition, carPosition } from "../utils/helpers";
+import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY } from "../utils/helpers";
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
-import { directionalLight } from "../core/Light";
+import { directionalLight, spotLight } from "../core/Light";
 
 // Helper Variables
 let isStarted = false;
@@ -127,6 +127,18 @@ const toggleSunset = (isDay) => {
 
 //DayNightCycle Animation_END
 
+const toggleSpotLight = (isDay) => {
+  const targetLightIntensity = isDay ? SPOTLIGHT_ON_INTENSITY : SPOTLIGHTLIGHT_OFF_INTENSITY;
+  const delay = isDay ? 3.5 : 0;
+  const duration = isDay ? 0.2 : 0.4;
+  gsap.to(spotLight, {
+    intensity: targetLightIntensity,
+    delay: delay,
+    duration: 0.2,
+    ease: "power4.out",
+  })
+}
+
 //Car Animations_START
 
 // Activates and Deactivates Car Headlights and Taillights
@@ -146,4 +158,4 @@ const toggleCarDance = () => {
 
 //Car Animations_END
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset };
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight };

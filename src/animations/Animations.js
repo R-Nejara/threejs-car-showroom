@@ -100,10 +100,11 @@ const lightIntensityAnimation = (targetLightIntensity) => {
 }
 
 //Animatate Sun setting
-const sunsetAnimation = (targetSunHeight) => {
+const sunsetAnimation = (targetSunHeight, targetSunDistance) => {
 
   gsap.to(directionalLight.position, {
     y: targetSunHeight,
+    x: targetSunDistance,
     duration: 3.5,
     ease: "power1.inOut",
   },

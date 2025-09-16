@@ -2,6 +2,7 @@ import {
   animateStart,
   showOverlayAnimation,
   textFadeOutAnimation,
+  toggleSpotLight,
   toggleSunset,
 } from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";

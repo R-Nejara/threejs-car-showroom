@@ -4,7 +4,7 @@ import { carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z,
 
 // Initialize Lights
 const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.05);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.02);
 const spotLight = new THREE.SpotLight(0xffffff, SPOTLIGHTLIGHT_OFF_INTENSITY, 0, 0.2, 1);
 
 // Initialize Lights Group

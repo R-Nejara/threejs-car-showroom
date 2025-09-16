@@ -51,6 +51,15 @@ const createLanternGroup = (positions) => {
   return lanternGroup;
 }
 
+const lanternRow = (xPositions, normalY, normalZ) => {
+  let lanternPositions = [];
+  xPositions.forEach((xPosition) => {
+    const lanternPositionVector = new THREE.Vector3(xPosition, normalY, normalZ);
+    lanternPositions.push(lanternPositionVector);
+  });
+  return lanternPositions;
+};
+
 // Add Lights To Group
 lights.add(directionalLight, ambientLight, spotLight, spotLight.target);
 

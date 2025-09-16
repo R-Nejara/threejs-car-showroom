@@ -60,6 +60,9 @@ const lanternRow = (xPositions, normalY, normalZ) => {
   return lanternPositions;
 };
 
+const frontLanternPositions = lanternRow(lanternPositionsX, LANTERN_Y, LANTERN_FRONT_Z);
+const backLanternPositions = lanternRow(lanternPositionsX, LANTERN_Y, LANTERN_BACK_Z);
+
 // Add Lights To Group
 lights.add(directionalLight, ambientLight, spotLight, spotLight.target);
 

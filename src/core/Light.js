@@ -3,7 +3,7 @@ import { directionalLightShadowSetup } from "./Shadow";
 import { directionalLightPosition } from "../utils/helpers";
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.05);
 const lights = new THREE.Group();
 
 directionalLight.position.copy(directionalLightPosition);

@@ -114,7 +114,8 @@ const sunsetAnimation = (targetSunHeight, targetSunDistance) => {
 //Sunset Animation
 const toggleSunset = (isDay) => {
 
-  const targetSunHeight = isDay ? 0 : 10
+  const targetSunHeight = isDay ? 0 : 25
+  const targetSunDistance = isDay ? 100 : 35
   const targetLightIntensity = isDay ? 0 : 5;
   const darkColor = new THREE.Color("#283785");
   const lightColor = new THREE.Color("#89cff0");

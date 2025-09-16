@@ -7,8 +7,8 @@ import {
 } from "../animations/Animations";
 import { camera, updateCamera } from "../core/Camera";
 import { updateRenderer } from "../core/Renderer";
-import { overlay, startButton, startButtonArea, startText } from "../Selectors";
-import { toggleControls, updateControls } from "./OrbitControls";
+import { overlay, startButton, startButtonArea } from "../Selectors";
+import { toggleControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
 import { updateSiteRenderer } from "../core/CSS3DRenderer";

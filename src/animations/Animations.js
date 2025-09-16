@@ -141,6 +141,13 @@ const toggleSpotLight = (isDay) => {
   })
 }
 
+const animateLanternLights = (lantern, targetLightIntensity, delay, duration) => {
+  gsap.to(lantern, {
+    intensity: targetLightIntensity,
+    delay: delay,
+    duration: duration,
+  })
+}
 //Car Animations_START
 
 // Activates and Deactivates Car Headlights and Taillights

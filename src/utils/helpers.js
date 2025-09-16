@@ -4,7 +4,7 @@ import * as THREE from "three";
 // Positions
 const carPosition = new THREE.Vector3(-2.5, 2, -1);
 const skyPosition = new THREE.Vector3(-5.5, 25, -3);
-const directionalLightPosition = new THREE.Vector3(10, 10, 0);
+const directionalLightPosition = new THREE.Vector3(15, 10, 15);
 
 // Ground and Sky Y Constants
 const GROUND_LEVEL_SIDEWALK_Y = 0.6;

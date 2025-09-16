@@ -25,6 +25,6 @@ directionalLightShadowSetup(directionalLight);
 spotLightShadowSetup(spotLight);
 
 // Add Lights To Group
-lights.add(directionalLight, ambientLight, spotLight);
+lights.add(directionalLight, ambientLight, spotLight, spotLight.target);
 
 export { lights, directionalLight, spotLight };

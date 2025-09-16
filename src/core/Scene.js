@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { camera } from "./Camera.js";
 import { modelGroup } from "./Showcase.js";
-import { lights } from "./Light.js";
+import { lights, spotLight } from "./Light.js";
 import { nameText, titleText } from "./Text.js";
 // Initialize Scene
 const scene = new THREE.Scene();
@@ -16,4 +16,6 @@ scene.add(modelGroup);
 scene.add(lights);
 scene.add(titleText);
 scene.add(nameText);
+scene.add(spotLight.target);
+
 export { scene };

@@ -24,6 +24,33 @@ directionalLight.add(new THREE.AxesHelper(10));
 directionalLightShadowSetup(directionalLight);
 spotLightShadowSetup(spotLight);
 
+/*
+ *==========
+ *=LANTERNS=
+ *==========
+ */
+
+// Initialize Lantern lights
+const createLanternGroup = (positions) => {
+
+  // Initialize Lantern Group
+  const lanternGroup = new THREE.Group()
+
+  // Loop Through Array filled with Vector3 elements
+  positions.forEach((position, index) => {
+    // Initialize Lantern
+    const lantern = new THREE.PointLight("#FFA300", LANTERNLIGHT_OFF_INTENSITY, 0, 1.5);
+    // lantern.power = 5;
+    // Set Position of Lantern
+    lantern.position.copy(position);
+    lantern.name = "lantern" + (index + 1)
+
+    // Add Lantern to LanternGroup
+    lanternGroup.add(lantern);
+  });
+  return lanternGroup;
+}
+
 // Add Lights To Group
 lights.add(directionalLight, ambientLight, spotLight, spotLight.target);
 

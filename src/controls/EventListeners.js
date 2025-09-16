@@ -2,6 +2,7 @@ import {
   animateStart,
   showOverlayAnimation,
   textFadeOutAnimation,
+  toggleLanternLights,
   toggleSpotLight,
   toggleSunset,
 } from "../animations/Animations";
@@ -68,6 +69,7 @@ overlay.dayNightSwitch.area.addEventListener("click", function () {
   const isDay = overlay.dayNightSwitch.sun.classList.contains("sun-inactive");
   toggleSunset(isDay);
   toggleSpotLight(isDay);
+  toggleLanternLights(isDay);
 });
 
 // MOBILE EVENTLISTENER

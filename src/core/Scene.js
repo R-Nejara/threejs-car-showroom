@@ -16,5 +16,7 @@ scene.add(modelGroup);
 scene.add(lights);
 scene.add(titleText);
 scene.add(nameText);
+scene.add(lanternFrontGroup);
+scene.add(lanternBackGroup);
 
 export { scene };

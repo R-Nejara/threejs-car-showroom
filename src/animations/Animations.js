@@ -179,4 +179,4 @@ const toggleCarDance = () => {
 
 //Car Animations_END
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight };
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights };

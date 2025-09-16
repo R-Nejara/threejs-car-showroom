@@ -8,4 +8,8 @@ const rendererShadowSetup = (renderer) => {
 const directionalLightShadowSetup = (directionalLight) => {
   directionalLight.shadow.normalBias = 0.2;
 };
-export { rendererShadowSetup, directionalLightShadowSetup };
+const spotLightShadowSetup = (spotLight) => {
+  spotLight.shadow.normalBias = 0.1;
+}
+
+export { rendererShadowSetup, directionalLightShadowSetup, spotLightShadowSetup };

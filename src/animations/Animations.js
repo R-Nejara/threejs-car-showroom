@@ -2,10 +2,10 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY } from "../utils/helpers";
+import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY } from "../utils/helpers";
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
-import { directionalLight, spotLight } from "../core/Light";
+import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
 
 // Helper Variables
 let isStarted = false;
@@ -148,6 +148,18 @@ const animateLanternLights = (lantern, targetLightIntensity, delay, duration) =>
     duration: duration,
   })
 }
+
+// Toggle Lantern Lights
+const toggleLanternLights = (isDay) => {
+  // Initialize Target Intensity, Delay and Duration for Animation
+  const targetLightIntensity = isDay ? LANTERNLIGHT_ON_INTENSITY : LANTERNLIGHT_OFF_INTENSITY;
+  const delay = isDay ? 4 : 0.5;
+  const duration = isDay ? 1 : 0.4
+  // Iterate through lantern groups and add animation
+  lanternFrontGroup.traverse(lantern => animateLanternLights(lantern, targetLightIntensity, delay, duration));
+  lanternBackGroup.traverse(lantern => animateLanternLights(lantern, targetLightIntensity, delay, duration));
+}
+
 //Car Animations_START
 
 // Activates and Deactivates Car Headlights and Taillights

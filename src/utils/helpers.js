@@ -11,10 +11,6 @@ const GROUND_LEVEL_SIDEWALK_Y = 0.6;
 const GROUND_LEVEL_STREET_Y = 0.4;
 const SKY_LEVEL_Y = skyPosition.y;
 
-//Light Intensities
-const SPOTLIGHT_ON_INTENSITY = 1000;
-const SPOTLIGHTLIGHT_OFF_INTENSITY = 0;
-
 // Initialize Sizes
 const sizes = {
   width: window.innerWidth,
@@ -42,6 +38,4 @@ export {
   GROUND_LEVEL_STREET_Y,
   SKY_LEVEL_Y,
   mobileMedia,
-  SPOTLIGHT_ON_INTENSITY,
-  SPOTLIGHTLIGHT_OFF_INTENSITY,
 };

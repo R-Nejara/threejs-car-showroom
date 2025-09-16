@@ -136,7 +136,7 @@ const toggleSpotLight = (isDay) => {
   gsap.to(spotLight, {
     intensity: targetLightIntensity,
     delay: delay,
-    duration: 0.2,
+    duration: duration,
     ease: "power4.out",
   })
 }

@@ -6,6 +6,7 @@ import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_IN
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
 import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
+import { car } from "../core/Showcase";
 
 // Helper Variables
 let isStarted = false;
@@ -168,8 +169,16 @@ const toggleCarLights = () => {
 };
 
 // Folds Car Mirros In and Out
-const toggleCarMirrors = () => {
-  let isRunning;
+const toggleCarMirrors = (isActive) => {
+  const targetRotation = isActive ? THREE.MathUtils.degToRad(-60) : 0;
+  gsap.to(car.mirror.leftBody.rotation, {
+    z: targetRotation,
+    duration:2.5
+  })
+  gsap.to(car.mirror.rightBody.rotation, {
+    z: -targetRotation,
+    duration:2.5
+  })
 };
 
 // Activates and Deactivates Car Dance
@@ -179,4 +188,4 @@ const toggleCarDance = () => {
 
 //Car Animations_END
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights };
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors };

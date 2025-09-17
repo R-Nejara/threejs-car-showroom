@@ -2,6 +2,7 @@ import {
   animateStart,
   showOverlayAnimation,
   textFadeOutAnimation,
+  toggleCarMirrors,
   toggleLanternLights,
   toggleSpotLight,
   toggleSunset,
@@ -39,6 +40,8 @@ overlay.bar.areas.lowBeam.addEventListener("click", function () {
 });
 overlay.bar.areas.mirror.addEventListener("click", function () {
   overlay.bar.icons.mirror.classList.toggle("mirror-active");
+  const isActive = overlay.bar.icons.mirror.classList.contains("mirror-active");
+  toggleCarMirrors(isActive);
 });
 overlay.bar.areas.spiral.addEventListener("click", function () {
   overlay.bar.icons.spiral.classList.toggle("icon-active");

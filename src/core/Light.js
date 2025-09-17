@@ -40,7 +40,6 @@ const createLanternGroup = (positions) => {
   positions.forEach((position, index) => {
     // Initialize Lantern
     const lantern = new THREE.PointLight("#FFA300", LANTERNLIGHT_OFF_INTENSITY, 0, 1.5);
-    // lantern.power = 5;
     // Set Position of Lantern
     lantern.position.copy(position);
     lantern.name = "lantern" + (index + 1)

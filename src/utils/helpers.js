@@ -6,6 +6,14 @@ const carPosition = new THREE.Vector3(-2.5, 2, -1);
 const skyPosition = new THREE.Vector3(-5.5, 25, -3);
 const directionalLightPosition = new THREE.Vector3(25, 25, 25);
 
+// Carlights Positions
+const carLightPositions = {
+  HEADLIGHT_RIGHT_POSITION: new THREE.Vector3(-4.35, 1.4, -1.84),
+  HEADLIGHT_LEFT_POSITION: new THREE.Vector3(-4.35, 1.3, -0.5),
+  TAILLIGHT_RIGHT_POSITION: new THREE.Vector3(-0.05, 1.4, -2),
+  TAILLIGHT_LEFT_POSITION: new THREE.Vector3(-0.05, 1.3, -0.4),
+}
+
 // Lantern Positions
 const LANTERN_FRONT_Z = -9;
 const LANTERN_BACK_Z = 15;
@@ -58,4 +66,5 @@ export {
   LANTERN_BACK_Z,
   LANTERN_Y,
   lanternPositionsX,
+  carLightPositions,
 };

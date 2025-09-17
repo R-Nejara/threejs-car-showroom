@@ -17,4 +17,31 @@ modelGroup.traverse((child) => {
   }
 });
 
-export { modelGroup };
+// Organize Car Parts into an Usable Object
+const car = {
+  mirror: {
+    leftBody: carArray[2],
+    leftHolder: carArray[3],
+    rightBody: carArray[4],
+    leftHolder: carArray[5],
+  },
+
+  lights: {
+    taillights: carArray[1],
+    headlights: carArray[0],
+  },
+
+  logo: {
+    front: carArray[10],
+    back: carArray[11],
+  },
+
+  tires: {
+    frontLeft: carArray[8],
+    frontRight: carArray[9],
+    backLeft: carArray[7],
+    backRight: carArray[6],
+  },
+}
+
+export { modelGroup, car };

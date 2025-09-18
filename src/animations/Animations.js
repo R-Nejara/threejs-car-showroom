@@ -188,15 +188,15 @@ const carTweens = new Map();
 const originalYPositions = new Map();
 
 // Activates and Deactivates Car Dance
-const toggleCarDance = (isActive) => {
+const toggleCarDance = () => {
   car.allParts.forEach((carPart) => {
     if (carPart.name.startsWith("Tire")) return;
-    carDanceAnimation(carPart, isActive);
+    carDanceAnimation(carPart);
   });
 };
 
 // Manages Everything Around The Car Animation
-const carDanceAnimation = (carPart, isActive) => {
+const carDanceAnimation = (carPart) => {
 
   if (!originalYPositions.has(carPart)) {
     originalYPositions.set(carPart, carPart.position.y)

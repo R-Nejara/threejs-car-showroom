@@ -192,6 +192,15 @@ const toggleCarDance = () => {
   let isRunning;
 };
 
+// Animation for Resetting the Y Position
+const resetYPosition = (carPart, originalY) => {
+  gsap.to(carPart.position, {
+    y: originalY,
+    duration: 0.8,
+  })
+}
+
+
 //Car Animations_END
 
 export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors };

@@ -2,6 +2,7 @@ import {
   animateStart,
   showOverlayAnimation,
   textFadeOutAnimation,
+  toggleCarDance,
   toggleCarMirrors,
   toggleLanternLights,
   toggleSpotLight,
@@ -45,6 +46,7 @@ overlay.bar.areas.mirror.addEventListener("click", function () {
 });
 overlay.bar.areas.spiral.addEventListener("click", function () {
   overlay.bar.icons.spiral.classList.toggle("icon-active");
+  toggleCarDance();
 });
 
 //Sound Switch

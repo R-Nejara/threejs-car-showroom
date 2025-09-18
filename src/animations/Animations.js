@@ -173,11 +173,11 @@ const toggleCarMirrors = (isActive) => {
   const targetRotation = isActive ? THREE.MathUtils.degToRad(-60) : 0;
   gsap.to(car.mirror.leftBody.rotation, {
     z: targetRotation,
-    duration:2.5
+    duration: 2.5
   })
   gsap.to(car.mirror.rightBody.rotation, {
     z: -targetRotation,
-    duration:2.5
+    duration: 2.5
   })
 };
 

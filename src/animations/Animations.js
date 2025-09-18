@@ -181,6 +181,12 @@ const toggleCarMirrors = (isActive) => {
   })
 };
 
+// Creates Map to Store Animations of Car Parts
+const carTweens = new Map();
+
+// Creates Map to Store Starting Positions of Car Parts
+const originalYPositions = new Map();
+
 // Activates and Deactivates Car Dance
 const toggleCarDance = () => {
   let isRunning;

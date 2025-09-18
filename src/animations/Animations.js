@@ -188,8 +188,11 @@ const carTweens = new Map();
 const originalYPositions = new Map();
 
 // Activates and Deactivates Car Dance
-const toggleCarDance = () => {
-  let isRunning;
+const toggleCarDance = (isActive) => {
+  car.allParts.forEach((carPart) => {
+    if (carPart.name.startsWith("Tire")) return;
+    carDanceAnimation(carPart, isActive);
+  });
 };
 
 // Manages Everything Around The Car Animation
@@ -240,4 +243,4 @@ const resetYPosition = (carPart, originalY) => {
 
 //Car Animations_END
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors };
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors, toggleCarDance };

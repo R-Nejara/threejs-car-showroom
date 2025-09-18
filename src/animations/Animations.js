@@ -192,6 +192,31 @@ const toggleCarDance = () => {
   let isRunning;
 };
 
+// Manages Everything Around The Car Animation
+const carDanceAnimation = (carPart, isActive) => {
+
+  if (!originalYPositions.has(carPart)) {
+    originalYPositions.set(carPart, carPart.position.y)
+  }
+
+  if (!carTweens.has(carPart)) {
+    // Creates Gsap Animation 
+    const tween = carGsapAnimation(carPart)
+
+    // Assinging Animation to carPart in Map
+    carTweens.set(carPart, tween);
+  } else {
+
+    // Kills Animations
+    carTweens.get(carPart).kill()
+
+    // Resets carPart Position to origin Position
+    resetYPosition(carPart, originalYPositions.get(carPart));
+
+    // Deletes Map entry of carPart
+    carTweens.delete(carPart);
+  }
+}
 
 // Create Gsap Bounce Animation 
 const carGsapAnimation = (carPart) => {

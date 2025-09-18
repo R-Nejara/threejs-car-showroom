@@ -192,6 +192,18 @@ const toggleCarDance = () => {
   let isRunning;
 };
 
+
+// Create Gsap Bounce Animation 
+const carGsapAnimation = (carPart) => {
+  const tween = gsap.to(carPart.position, {
+    y: carPart.position.y + 0.05,
+    duration: 0.17,
+    yoyo: true,
+    repeat: -1,
+  })
+  return tween;
+}
+
 // Animation for Resetting the Y Position
 const resetYPosition = (carPart, originalY) => {
   gsap.to(carPart.position, {

@@ -11,45 +11,45 @@ const setShadows = (child) => {
   child.castShadow = true;
   child.receiveShadow = true;
 }
+const fillCarMap = (child) => {
+  if (carPartsNames.includes(child.name)) {
+    carMap.set(child.name, child);
+  }
+}
 
 
 const modelGroup = await getObjectGroup("/models/Golf5.glb");
 modelGroup.traverse((child) => {
   setShadows(child);
-});
-
-modelGroup.traverse((child) => {
-  if (carPartsNames.includes(child.name)) {
-    carArray.push(child);
-  }
+  fillCarMap(child);
 });
 
 // Organize Car Parts into an Usable Object
 const car = {
   mirror: {
-    leftBody: carArray[3],
-    leftHolder: carArray[4],
-    rightBody: carArray[5],
-    rightHolder: carArray[6],
+    leftBody: carMap.get("Mirror_Left"),
+    leftHolder:carMap.get("Mirror_Left_Holder"),
+    rightBody: carMap.get("Mirror_Right"),
+    rightHolder:carMap.get("Mirror_Right_Holder"),
   },
 
   lights: {
-    taillights: carArray[2],
-    headlights: carArray[1],
+    taillights:carMap.get("Taillights") ,
+    headlights: carMap.get("Headlights"),
   },
 
   logo: {
-    front: carArray[11],
-    back: carArray[12],
+    front: carMap.get("Front_Logo"),
+    back: carMap.get("Tail_Logo"),
   },
 
   tires: {
-    frontLeft: carArray[9],
-    frontRight: carArray[10],
-    backLeft: carArray[8],
-    backRight: carArray[7],
+    frontLeft: carMap.get("Tire_Front_Left"),
+    frontRight: carMap.get("Tire_Front_Right"),
+    backLeft: carMap.get("Tire_Back_Left"),
+    backRight: carMap.get("Tire_Back_Right"),
   },
-  allParts: carArray,
+  allParts: carMap,
 }
 
 export { modelGroup, car };

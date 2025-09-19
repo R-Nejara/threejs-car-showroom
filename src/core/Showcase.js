@@ -5,7 +5,7 @@ import { getObjectGroup } from "../loaders/GlbLoader";
 const carMap = new Map();
 // Get Headlights, Taillights, Mirrors and Car Base into car Array
 const carPartsNames = ["Headlights", "Taillights", "Mirror_Left", "Mirror_Right", "Mirror_Right_Holder", "Mirror_Left_Holder", "Tire_Front_Right", "Tire_Front_Left", "Tire_Back_Right", "Tire_Back_Left", "Front_Logo", "Tail_Logo", "Car_Base"];
-const carArray = [];
+
 // Setup Shadow for Model Objects
 const setShadows = (child) => {
   child.castShadow = true;

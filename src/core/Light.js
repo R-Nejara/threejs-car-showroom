@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { directionalLightShadowSetup, spotLightShadowSetup } from "./Shadow";
-import { carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX, SPOTLIGHT_ON_INTENSITY, SPOTLIGHTLIGHT_OFF_INTENSITY } from "../utils/helpers";
+import { carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX , SPOTLIGHTLIGHT_OFF_INTENSITY } from "../utils/helpers";
 
 // Initialize Lights
 const directionalLight = new THREE.DirectionalLight(0xffffff, 5);

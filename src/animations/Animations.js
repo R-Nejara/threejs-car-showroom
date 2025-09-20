@@ -209,8 +209,11 @@ const animateTailights = (targetTaillightColor) => {
 }
 
 // Activates and Deactivates Car Headlights and Taillights
-const toggleCarLights = () => {
-  let isRunning;
+const toggleCarLights = (isDay) => {
+  const targetHeadlightColor = isDay ? 0xffffff : "#3B3B3B";
+  const targetTaillightColor = isDay ? "#ff0000" : "#4D0000";
+  animateHeadlights(targetHeadlightColor);
+  animateTailights(targetTaillightColor);
 };
 
 // Folds Car Mirros In and Out

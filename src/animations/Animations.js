@@ -170,13 +170,17 @@ const animateLanternGlass = (targetColor, delay, duration) => {
 
 // Toggle Lantern Lights
 const toggleLanternLights = (isDay) => {
+
   // Initialize Target Intensity, Delay and Duration for Animation
   const targetLightIntensity = isDay ? LANTERNLIGHT_ON_INTENSITY : LANTERNLIGHT_OFF_INTENSITY;
   const delay = isDay ? 4 : 0.5;
-  const duration = isDay ? 1 : 0.4
+  const duration = isDay ? 1 : 0.4;
+  const targetColor = isDay ? "#FFA300" : "#392008";
+
   // Iterate through lantern groups and add animation
   lanternFrontGroup.traverse(lantern => animateLanternLights(lantern, targetLightIntensity, delay, duration));
   lanternBackGroup.traverse(lantern => animateLanternLights(lantern, targetLightIntensity, delay, duration));
+  animateLanternGlass(targetColor, delay, duration)
 }
 
 //Car Animations_START

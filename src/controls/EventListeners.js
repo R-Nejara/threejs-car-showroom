@@ -3,6 +3,7 @@ import {
   showOverlayAnimation,
   textFadeOutAnimation,
   toggleCarDance,
+  toggleCarLights,
   toggleCarMirrors,
   toggleLanternLights,
   toggleSpotLight,
@@ -38,6 +39,8 @@ startButton.addEventListener("click", function () {
 //Bar Buttons
 overlay.bar.areas.lowBeam.addEventListener("click", function () {
   overlay.bar.icons.lowBeam.classList.toggle("low-beam-active");
+  const isActive = overlay.bar.icons.lowBeam.classList.contains(("low-beam-active"));
+  toggleCarLights(isActive);
 });
 overlay.bar.areas.mirror.addEventListener("click", function () {
   overlay.bar.icons.mirror.classList.toggle("mirror-active");

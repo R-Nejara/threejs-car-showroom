@@ -185,6 +185,29 @@ const toggleLanternLights = (isDay) => {
 
 //Car Animations_START
 
+
+const animateHeadlights = (targetHeadlightColor) => {
+  const color = new THREE.Color(targetHeadlightColor)
+  gsap.to(car.lights.headlights.material.emissive, {
+    r: color.r,
+    g: color.g,
+    b: color.b,
+    duration: 1,
+    delay: 1,
+  })
+}
+
+const animateTailights = (targetTaillightColor) => {
+  const color = new THREE.Color(targetTaillightColor)
+  gsap.to(car.lights.taillights.material.emissive, {
+    r: color.r,
+    g: color.g,
+    b: color.b,
+    duration: 1,
+    delay: 1,
+  })
+}
+
 // Activates and Deactivates Car Headlights and Taillights
 const toggleCarLights = () => {
   let isRunning;

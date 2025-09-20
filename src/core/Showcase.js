@@ -69,4 +69,8 @@ const car = {
   allParts: carMap,
 }
 
+// Quick Car Lights Setup
+car.lights.headlights.material = new THREE.MeshStandardMaterial({ color: "#242424", emissive: "#242424", emissiveIntensity: 1 });
+car.lights.taillights.material = new THREE.MeshStandardMaterial({ color: "#4D0000", emissive: "#4D0000", emissiveIntensity: 1 });
+
 export { modelGroup, car, lanternGlassArray };

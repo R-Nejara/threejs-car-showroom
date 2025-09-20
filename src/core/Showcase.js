@@ -25,7 +25,7 @@ const fillCarMap = (child) => {
 // Setup Lantern Glass Material Properties and store Lantern Glass in Array
 const lanternGlassSetup = (child) => {
   if (child.name.startsWith("LanternGlass")) {
-    child.material = new THREE.MeshBasicMaterial({color: "#392008", transparent: true, opacity: 0.7});
+    child.material = new THREE.MeshBasicMaterial({ color: "#392008", transparent: true, opacity: 0.7 });
     lanternGlassArray.push(child);
   }
 }
@@ -45,13 +45,13 @@ modelGroup.traverse((child) => {
 const car = {
   mirror: {
     leftBody: carMap.get("Mirror_Left"),
-    leftHolder:carMap.get("Mirror_Left_Holder"),
+    leftHolder: carMap.get("Mirror_Left_Holder"),
     rightBody: carMap.get("Mirror_Right"),
-    rightHolder:carMap.get("Mirror_Right_Holder"),
+    rightHolder: carMap.get("Mirror_Right_Holder"),
   },
 
   lights: {
-    taillights:carMap.get("Taillights") ,
+    taillights: carMap.get("Taillights"),
     headlights: carMap.get("Headlights"),
   },
 

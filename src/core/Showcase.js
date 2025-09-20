@@ -1,6 +1,9 @@
 import * as THREE from "three";
 import { getObjectGroup } from "../loaders/GlbLoader";
 
+// Initialze  Array to Store Lantern Glass
+const lanternGlassArray = [];
+
 // Initialize Map to Store Car Parts
 const carMap = new Map();
 
@@ -19,12 +22,21 @@ const fillCarMap = (child) => {
   }
 }
 
+// Setup Lantern Glass Material Properties and store Lantern Glass in Array
+const lanternGlassSetup = (child) => {
+  if (child.name.startsWith("LanternGlass")) {
+    child.material = new THREE.MeshBasicMaterial({color: "#392008", transparent: true, opacity: 0.7});
+    lanternGlassArray.push(child);
+  }
+}
+
 // Storing Glb Object
 const modelGroup = await getObjectGroup("/models/Golf5.glb");
 
 // Iterate Through Glb Children Objects
 modelGroup.traverse((child) => {
   // Configuration
+  lanternGlassSetup(child);
   setShadows(child);
   fillCarMap(child);
 });
@@ -57,4 +69,4 @@ const car = {
   allParts: carMap,
 }
 
-export { modelGroup, car };
+export { modelGroup, car, lanternGlassArray };

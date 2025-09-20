@@ -6,7 +6,7 @@ import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_IN
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
 import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
-import { car } from "../core/Showcase";
+import { car, lanternGlassArray } from "../core/Showcase";
 
 // Helper Variables
 let isStarted = false;
@@ -148,6 +148,24 @@ const animateLanternLights = (lantern, targetLightIntensity, delay, duration) =>
     delay: delay,
     duration: duration,
   })
+}
+
+// Animating On/Off transition for Lantern Glass
+const animateLanternGlass = (targetColor, delay, duration) => {
+
+  // Initialize targetColor as Color Object
+  const color = new THREE.Color(targetColor);
+
+  // Iterate through Lantern Glass and Set Animation
+  lanternGlassArray.forEach((glass) => {
+    gsap.to(glass.material.color, {
+      r: color.r,
+      g: color.g,
+      b: color.b,
+      delay: delay,
+      duration: duration,
+    })
+  });
 }
 
 // Toggle Lantern Lights

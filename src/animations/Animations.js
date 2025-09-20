@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY } from "../utils/helpers";
+import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY, directionalLightPosition } from "../utils/helpers";
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
 import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
@@ -115,8 +115,8 @@ const sunsetAnimation = (targetSunHeight, targetSunDistance) => {
 //Sunset Animation
 const toggleSunset = (isDay) => {
 
-  const targetSunHeight = isDay ? 0 : 25
-  const targetSunDistance = isDay ? 100 : 35
+  const targetSunHeight = isDay ? 0 : directionalLightPosition.y;
+  const targetSunDistance = isDay ? directionalLightPosition.x + 75 : directionalLightPosition.x;
   const targetLightIntensity = isDay ? 0 : 5;
   const darkColor = new THREE.Color("#283785");
   const lightColor = new THREE.Color("#89cff0");

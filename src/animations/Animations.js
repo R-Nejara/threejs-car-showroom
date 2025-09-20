@@ -291,4 +291,4 @@ const resetYPosition = (carPart, originalY) => {
 
 //Car Animations_END
 
-export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors, toggleCarDance };
+export { animateStart, textFadeOutAnimation, showOverlayAnimation, toggleSunset, toggleSpotLight, toggleLanternLights, toggleCarMirrors, toggleCarDance, toggleCarLights };

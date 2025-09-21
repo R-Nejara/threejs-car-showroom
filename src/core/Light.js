@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { directionalLightShadowSetup, spotLightShadowSetup } from "./Shadow";
-import {carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX , SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
+import { CARLIGHT_OFF_INTENSITY, carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX , SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
 
 // Initialize Lights
 const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
@@ -11,6 +11,7 @@ const taillightsLight = new THREE.SpotLight("#Ff0000", CARLIGHT_OFF_INTENSITY, 0
 
 // Initialize Lights Group
 const lights = new THREE.Group();
+const carLights = new THREE.Group();
 
 // Configure Spotlight
 spotLight.position.copy(carPosition).add(new THREE.Vector3(0, 15, 0));
@@ -21,6 +22,13 @@ spotLight.target.position.copy(carPosition);
 directionalLight.position.copy(directionalLightPosition);
 directionalLight.castShadow = true;
 directionalLight.add(new THREE.AxesHelper(10));
+
+// Configure Headlights and Taillights
+headlightsLight.position.copy(carPosition).add(new THREE.Vector3(-1,1.5,-0.3));
+headlightsLight.target.position.copy(headlightsLight.position).add(new THREE.Vector3(-3,-1,0));
+taillightsLight.position.copy(carPosition).add(new THREE.Vector3(2, 1.5, -0.3));
+taillightsLight.target.position.copy(taillightsLight.position).add(new THREE.Vector3(3,-1,0));
+carLights.add(headlightsLight, headlightsLight.target, taillightsLight, taillightsLight.target)
 
 // Run Shadow Setups
 directionalLightShadowSetup(directionalLight);
@@ -70,4 +78,4 @@ const lanternBackGroup = createLanternGroup(backLanternPositions);
 // Add Lights To Group
 lights.add(directionalLight, ambientLight, spotLight, spotLight.target);
 
-export { lights, directionalLight, spotLight, lanternFrontGroup, lanternBackGroup };
+export { lights, directionalLight, spotLight, lanternFrontGroup, lanternBackGroup, carLights, headlightsLight, taillightsLight };

@@ -204,12 +204,18 @@ const animateHeadlights = (targetHeadlightColor, targetLightIntensity) => {
   })
 }
 
-const animateTailights = (targetTaillightColor) => {
+const animateTailights = (targetTaillightColor, targetLightIntensity) => {
   const color = new THREE.Color(targetTaillightColor)
   gsap.to(car.lights.taillights.material.emissive, {
     r: color.r,
     g: color.g,
     b: color.b,
+    duration: 1,
+    delay: 1,
+  })
+
+  gsap.to(taillightsLight, {
+    intensity: targetLightIntensity,
     duration: 1,
     delay: 1,
   })

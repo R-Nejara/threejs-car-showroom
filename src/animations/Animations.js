@@ -223,10 +223,11 @@ const animateTailights = (targetTaillightColor, targetLightIntensity) => {
 
 // Activates and Deactivates Car Headlights and Taillights
 const toggleCarLights = (isDay) => {
-  const targetHeadlightColor = isDay ? 0xffffff : "#3B3B3B";
+  const targetHeadlightColor = isDay ? "#B8FFFF" : "#3B3B3B";
   const targetTaillightColor = isDay ? "#ff0000" : "#4D0000";
-  animateHeadlights(targetHeadlightColor);
-  animateTailights(targetTaillightColor);
+  const targetLightIntensity = isDay ? CARLIGHT_ON_INTENSITY : CARLIGHT_OFF_INTENSITY;
+  animateHeadlights(targetHeadlightColor, targetLightIntensity);
+  animateTailights(targetTaillightColor, targetLightIntensity);
 };
 
 // Folds Car Mirros In and Out

@@ -2,10 +2,10 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { skyPosition, carPosition, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY, directionalLightPosition, SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
+import { skyPosition, carPosition, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY, directionalLightPosition, CARLIGHT_ON_INTENSITY, CARLIGHT_OFF_INTENSITY, SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
-import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
+import { directionalLight, headlightsLight, lanternBackGroup, lanternFrontGroup, spotLight, taillightsLight } from "../core/Light";
 import { car, lanternGlassArray } from "../core/Showcase";
 
 // Helper Variables
@@ -186,12 +186,19 @@ const toggleLanternLights = (isDay) => {
 //Car Animations_START
 
 
-const animateHeadlights = (targetHeadlightColor) => {
+const animateHeadlights = (targetHeadlightColor, targetLightIntensity) => {
   const color = new THREE.Color(targetHeadlightColor)
+
   gsap.to(car.lights.headlights.material.emissive, {
     r: color.r,
     g: color.g,
     b: color.b,
+    duration: 1,
+    delay: 1,
+  })
+
+  gsap.to(headlightsLight, {
+    intensity: targetLightIntensity,
     duration: 1,
     delay: 1,
   })

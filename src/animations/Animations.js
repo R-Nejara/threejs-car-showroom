@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { camera } from "../core/Camera";
 import { controls } from "../controls/OrbitControls";
 import { gsap } from "gsap";
-import { skyPosition, carPosition, SPOTLIGHTLIGHT_OFF_INTENSITY, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY, directionalLightPosition } from "../utils/helpers";
+import { skyPosition, carPosition, SPOTLIGHT_ON_INTENSITY, LANTERNLIGHT_ON_INTENSITY, LANTERNLIGHT_OFF_INTENSITY, directionalLightPosition, SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
 import { overlay } from "../Selectors";
 import { scene } from "../core/Scene";
 import { directionalLight, lanternBackGroup, lanternFrontGroup, spotLight } from "../core/Light";
@@ -131,7 +131,7 @@ const toggleSunset = (isDay) => {
 //DayNightCycle Animation_END
 
 const toggleSpotLight = (isDay) => {
-  const targetLightIntensity = isDay ? SPOTLIGHT_ON_INTENSITY : SPOTLIGHTLIGHT_OFF_INTENSITY;
+  const targetLightIntensity = isDay ? SPOTLIGHT_ON_INTENSITY : SPOTLIGHT_OFF_INTENSITY;
   const delay = isDay ? 3.5 : 0;
   const duration = isDay ? 0.2 : 0.4;
   gsap.to(spotLight, {

@@ -1,11 +1,13 @@
 import * as THREE from "three";
 import { directionalLightShadowSetup, spotLightShadowSetup } from "./Shadow";
-import { carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX , SPOTLIGHTLIGHT_OFF_INTENSITY } from "../utils/helpers";
+import {carPosition, directionalLightPosition, LANTERN_BACK_Z, LANTERN_FRONT_Z, LANTERN_Y, LANTERNLIGHT_OFF_INTENSITY, lanternPositionsX , SPOTLIGHT_OFF_INTENSITY } from "../utils/helpers";
 
 // Initialize Lights
 const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.02);
-const spotLight = new THREE.SpotLight(0xffffff, SPOTLIGHTLIGHT_OFF_INTENSITY, 0, 0.2, 1);
+const spotLight = new THREE.SpotLight(0xffffff, SPOTLIGHT_OFF_INTENSITY, 0, 0.2, 1);
+const headlightsLight = new THREE.SpotLight("#B8FFFF", CARLIGHT_OFF_INTENSITY, 0, 0.8, 1);
+const taillightsLight = new THREE.SpotLight("#Ff0000", CARLIGHT_OFF_INTENSITY, 0, 1.2, 1);
 
 // Initialize Lights Group
 const lights = new THREE.Group();

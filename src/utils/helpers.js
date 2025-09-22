@@ -6,6 +6,9 @@ const carPosition = new THREE.Vector3(-2.5, 2, -1);
 const skyPosition = new THREE.Vector3(-5.5, 25, -3);
 const directionalLightPosition = new THREE.Vector3(25, 25, 25);
 
+// Compile Positions
+const compilePositionArrays = [[-50, 1, 0], [-50, 15, 0], [50, 15, 0], [0, 15, 50], [0, 15, -50]]
+
 // Car Lights Positions
 const headlightsPosition = new THREE.Vector3().copy(carPosition).add(new THREE.Vector3(-5,1,0));
 const taillightsPosition = new THREE.Vector3().copy(carPosition).add(new THREE.Vector3(5,1,0));
@@ -68,4 +71,5 @@ export {
   taillightsPosition,
   CARLIGHT_ON_INTENSITY,
   CARLIGHT_OFF_INTENSITY,
+  compilePositionArrays,
 };

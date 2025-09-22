@@ -15,7 +15,7 @@ import { overlay, startButton, startButtonArea } from "../Selectors";
 import { toggleControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
-import { muteSounds, playBarButton, playButton, playSwitch, playTraffic } from "../core/Audio";
+import { muteSounds, playBarButton, playButton, playCarMusic, playSwitch, playTraffic } from "../core/Audio";
 
 window.addEventListener("resize", () => {
   updateCamera();
@@ -51,8 +51,10 @@ overlay.bar.areas.mirror.addEventListener("click", function () {
 });
 overlay.bar.areas.spiral.addEventListener("click", function () {
   overlay.bar.icons.spiral.classList.toggle("icon-active");
+  const isActive = overlay.bar.icons.spiral.classList.contains("icon-active")
   toggleCarDance();
   playBarButton();
+  playCarMusic(isActive);
 });
 
 //Sound Switch

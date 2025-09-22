@@ -18,11 +18,19 @@ const playBarButton = () => {
   barButtonSound.volume = 0.6;
   barButtonSound.play()
 }
+const carMusic = new Audio("audios/billy_bounce.wav")
+const playCarMusic = (isActive) => {
+  carMusic.volume = 0.8
+  carMusic.play();
+  if (!isActive) carMusic.pause()
+
+}
 
 const muteSounds = (isMuted) => {
   trafficSound.muted = isMuted;
   barButtonSound.muted = isMuted;
   switchSound.muted = isMuted;
+  carMusic.muted = isMuted;
 }
 
-export { playSwitch, playTraffic, muteSounds, playButton, playBarButton }
+export { playSwitch, playTraffic, muteSounds, playButton, playBarButton, playCarMusic }

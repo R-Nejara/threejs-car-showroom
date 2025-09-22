@@ -15,6 +15,7 @@ import { overlay, startButton, startButtonArea } from "../Selectors";
 import { toggleControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
+import { muteSounds, playBarButton, playButton, playSwitch, playTraffic } from "../core/Audio";
 
 window.addEventListener("resize", () => {
   updateCamera();
@@ -30,6 +31,7 @@ startButton.addEventListener("click", function () {
   toggleControls();
   animateStart();
   showOverlayAnimation();
+  playTraffic();
 });
 
 // OVERLAY EVENTLISTENER
@@ -39,21 +41,27 @@ overlay.bar.areas.lowBeam.addEventListener("click", function () {
   overlay.bar.icons.lowBeam.classList.toggle("low-beam-active");
   const isActive = overlay.bar.icons.lowBeam.classList.contains(("low-beam-active"));
   toggleCarLights(isActive);
+  playBarButton();
 });
 overlay.bar.areas.mirror.addEventListener("click", function () {
   overlay.bar.icons.mirror.classList.toggle("mirror-active");
   const isActive = overlay.bar.icons.mirror.classList.contains("mirror-active");
   toggleCarMirrors(isActive);
+  playBarButton();
 });
 overlay.bar.areas.spiral.addEventListener("click", function () {
   overlay.bar.icons.spiral.classList.toggle("icon-active");
   toggleCarDance();
+  playBarButton();
 });
 
 //Sound Switch
 overlay.volume.area.addEventListener("click", function () {
   overlay.volume.icon.classList.toggle("volume-hide");
   overlay.volume.muteIcon.classList.toggle("volume-hide");
+  const isMuted = !overlay.volume.muteIcon.classList.contains("volume-hide");
+  muteSounds(isMuted)
+  playButton();
 });
 
 // Day/Night Switch
@@ -74,8 +82,9 @@ overlay.dayNightSwitch.area.addEventListener("click", function () {
   // Initilize variable to show if it's Daytime
   const isDay = overlay.dayNightSwitch.sun.classList.contains("sun-inactive");
   toggleSunset(isDay);
-  toggleSpotLight(isDay);
+  // toggleSpotLight(isDay);
   toggleLanternLights(isDay);
+  playSwitch();
 });
 
 // MOBILE EVENTLISTENER

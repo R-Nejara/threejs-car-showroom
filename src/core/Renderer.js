@@ -27,7 +27,13 @@ const updateRenderer = () => {
 const render = () => {
   renderer.render(scene, camera);
 };
+
+const compileAndRender = () => {
+  renderer.compile(scene, camera);
+  renderer.render(scene, camera);
+}
+
 rendererShadowSetup(renderer);
 updateRenderer();
 
-export { render, renderer, updateRenderer };
+export { render, renderer, updateRenderer, compileAndRender };

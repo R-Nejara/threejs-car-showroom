@@ -15,12 +15,10 @@ import { overlay, startButton, startButtonArea } from "../Selectors";
 import { toggleControls } from "./OrbitControls";
 import { titleText, nameText } from "../core/Text";
 import { mobileMedia } from "../utils/helpers";
-import { updateSiteRenderer } from "../core/CSS3DRenderer";
 
 window.addEventListener("resize", () => {
   updateCamera();
   updateRenderer();
-  updateSiteRenderer();
   stopTransition();
 });
 

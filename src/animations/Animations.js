@@ -194,13 +194,11 @@ const animateHeadlights = (targetHeadlightColor, targetLightIntensity) => {
     g: color.g,
     b: color.b,
     duration: 1,
-    delay: 1,
   })
 
   gsap.to(headlightsLight, {
     intensity: targetLightIntensity,
     duration: 1,
-    delay: 1,
   })
 }
 
@@ -211,13 +209,11 @@ const animateTailights = (targetTaillightColor, targetLightIntensity) => {
     g: color.g,
     b: color.b,
     duration: 1,
-    delay: 1,
   })
 
   gsap.to(taillightsLight, {
     intensity: targetLightIntensity,
     duration: 1,
-    delay: 1,
   })
 }
 

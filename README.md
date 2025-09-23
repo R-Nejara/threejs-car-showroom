@@ -1,93 +1,110 @@
-# Three.js Car Project – Showroom
+# 🚗 Three.js Car Showroom
 
-Welcome to the **Three.js Car Project**!  
-This project is a virtual showroom for a 3D car model, built with [Three.js](https://threejs.org/).  
-Explore and interact with a car in a modern web environment.
+![Three.js](https://img.shields.io/badge/three.js-3D-blue) ![Blender](https://img.shields.io/badge/blender-modeling-orange) ![License](https://img.shields.io/badge/license-MIT-green)
 
----
-
-## 🌐 Preview
-
-[Live Demo](https://coruscating-druid-fc1ea1.netlify.app/)
-
-## 🚗 Features
-
-- **3D Car Model:**  
-  View and interact with a detailed car model in a virtual showroom.
-
-- **Orbit Controls:**  
-  Rotate, zoom, and pan around the car for a full 360° experience.
-
-- **Realistic Lighting:**  
-  Carefully placed lights to highlight the car’s design.
-
-- **Modular Code Structure:**  
-  Clean, maintainable code with separation of concerns.
+> A visually immersive car showroom built with Three.js, featuring interactive car controls, realistic lighting, ambient sounds, and a custom 3D car model—all designed and coded by me!
 
 ---
 
-## 🛠️ Getting Started
+## 🎬 Preview
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or newer recommended)
-- [npm](https://www.npmjs.com/)
-
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/R-Nejara/threejs-car-project.git
-   cd threejs-car-project
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server:**
-
-   ```bash
-   npm run dev
-   ```
-
-   Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-   The output will be in the `dist/` folder.
+**Title Screen**  
+<img width="500px" height="500px" src="/preview_images/title_screen.png">
 
 ---
 
-## 🎮 Controls
+## ✨ Features
 
-<!-- - **Rotate:** Left mouse button drag
-- **Zoom:** Mouse wheel scroll
-- **Pan:** Right mouse button drag -->
+- **🌗 Day & Night Mode**  
+  Toggle between day and night for a unique atmosphere, complete with dynamic environmental lighting and ambient sounds.
+  - _Daytime Scene_  
+    <img width="500px" height="500px" src="/preview_images/day_mode.png">
+  - _Street Environment at Night_  
+    <img width="500px" height="500px" src="/preview_images/night_mode.png">
+  - _Headlights & Streetlights at Night_  
+    <img width="500px" height="500px" src="/preview_images/headlights.png">
+  - Taillights & Streetlights at Night_  
+    <img width="500px" height="500px" src="/preview_images/taillights.png">
 
-_Soon_
+
+- **🤖 Interactive Car Controls**  
+  Play with the car's unique features using the UI at the bottom:
+  - Fold/unfold mirrors  
+    - _Mirror Folded Example_  
+      <img width="300px" height="500px" src="/preview_images/mirror_folded.png">
+    - _Mirror Unfolded Example_  
+      <img width="300px" height="500px" src="/preview_images/mirror_unfolded.png">
+  - Turn headlights and taillights on/off
+  - Activate "Car Dance Mode" for a fun animation
+
+- **🎮 Intuitive Camera**  
+  Use OrbitControls locked on the car, so you're always focused on the main scene—no wandering off the map!
+
+- **🌳 Realistic, Stylized Environment**  
+  Benches, lamp posts, bike lane, and a subtle fog effect create a cozy and inviting atmosphere.
 
 ---
 
-## 🖼️ Credits
+## 🚀 Quick Start
 
-- **3D Model:** Created in Blender
-- **Development:** [Rayan Nejara]
-- **Libraries:**
-  - [Three.js](https://threejs.org/)
+Clone the repository:
+```bash
+git clone https://github.com/R-Nejara/threejs-car-showroom.git
+```
+
+Move into the project directory:
+```bash
+cd threejs-car-showroom
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Build the project:
+```bash
+npm run build
+```
+
+Preview locally:
+```bash
+npm run preview
+```
+
+Open the preview URL in your browser to explore!
 
 ---
 
-## 📄 License
+## 🛠️ Built With
 
-This project is for educational and demonstration purposes.  
-Feel free to use, modify, and build upon it!
+- [Three.js](https://threejs.org/) – 3D rendering
+- [Blender](https://www.blender.org/) – Car model creation
+- JavaScript, HTML, CSS
 
 ---
 
-**Enjoy exploring the showroom!**
+## 🏆 Credits
+
+- **3D Model & Code:** [Rayan Nejara](https://github.com/R-Nejara)  
+  _All car models and logic made by me!_
+
+---
+
+## 💡 Feedback
+
+Have ideas or want to contribute?  
+Feel free to [open an issue](https://github.com/R-Nejara/threejs-car-showroom/issues) or star the repo!
+
+---
+
+<!--
+Image references for maintainers:
+- image1: Night, car taillights
+- image2: (Not used, can adjust if you want)
+- image3: Day, car on street
+- image4: Night, headlights
+- image5: Mirror folded
+- image6: Title screen
+- image7: Mirror unfolded or night street
+-->

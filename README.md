@@ -23,7 +23,7 @@
     <img width="500px" height="500px" src="/preview_images/night_mode.png">
   - _Headlights & Streetlights at Night_  
     <img width="500px" height="500px" src="/preview_images/headlights.png">
-  - Taillights & Streetlights at Night_  
+  - _Taillights & Streetlights at Night_  
     <img width="500px" height="500px" src="/preview_images/taillights.png">
 
 

@@ -8,8 +8,7 @@
 
 ## 🎬 Preview
 
-**Title Screen**  
-<img width="500px" height="500px" src="/preview_images/title_screen.png">
+[Live Preview](https://r-nejara-car-project.netlify.app/)
 
 ---
 
